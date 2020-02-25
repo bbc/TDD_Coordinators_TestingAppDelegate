@@ -85,6 +85,13 @@
 		983EF03B240565F6009C74AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 983EEFCB24056209009C74AC /* Main.storyboard */; };
 		983EF03C240565F7009C74AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 983EEFCB24056209009C74AC /* Main.storyboard */; };
 		983EF03D240565F7009C74AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 983EEFCB24056209009C74AC /* Main.storyboard */; };
+		983EF03F2405685A009C74AC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EF03E2405685A009C74AC /* main.swift */; };
+		983EF047240569E8009C74AC /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EF04124056912009C74AC /* TestingAppDelegate.swift */; };
+		983EF04A240569ED009C74AC /* TestingSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EF0432405695A009C74AC /* TestingSceneDelegate.swift */; };
+		983EF04B24056CD0009C74AC /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EF04124056912009C74AC /* TestingAppDelegate.swift */; };
+		983EF04C24056CD0009C74AC /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EF04124056912009C74AC /* TestingAppDelegate.swift */; };
+		983EF04D24056CDF009C74AC /* TestingSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EF0432405695A009C74AC /* TestingSceneDelegate.swift */; };
+		983EF04E24056CE0009C74AC /* TestingSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EF0432405695A009C74AC /* TestingSceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +154,9 @@
 		983EF000240562E5009C74AC /* TestingAppDelegateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingAppDelegateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		983EF002240562E5009C74AC /* TestingAppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegateTests.swift; sourceTree = "<group>"; };
 		983EF004240562E5009C74AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		983EF03E2405685A009C74AC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		983EF04124056912009C74AC /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
+		983EF0432405695A009C74AC /* TestingSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingSceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +226,7 @@
 				983EEFF02405624C009C74AC /* AppLauncher.swift */,
 				983EEF9B240560BC009C74AC /* AppDelegate.swift */,
 				983EEF9D240560BC009C74AC /* SceneDelegate.swift */,
+				983EF03E2405685A009C74AC /* main.swift */,
 				983EEFA4240560BF009C74AC /* Assets.xcassets */,
 				983EEFA9240560BF009C74AC /* Info.plist */,
 			);
@@ -296,6 +307,8 @@
 		983EF001240562E5009C74AC /* TestingAppDelegateTests */ = {
 			isa = PBXGroup;
 			children = (
+				983EF04124056912009C74AC /* TestingAppDelegate.swift */,
+				983EF0432405695A009C74AC /* TestingSceneDelegate.swift */,
 				983EF002240562E5009C74AC /* TestingAppDelegateTests.swift */,
 				983EF004240562E5009C74AC /* Info.plist */,
 			);
@@ -391,7 +404,6 @@
 					};
 					983EEFAD240560BF009C74AC = {
 						CreatedOnToolsVersion = 11.2.1;
-						TestTargetID = 983EEF97240560BC009C74AC;
 					};
 					983EEFB8240560BF009C74AC = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -481,6 +493,7 @@
 				983EEFE72405621A009C74AC /* AppCoordinator.swift in Sources */,
 				983EEFEA2405621A009C74AC /* VCFactoryProtocol.swift in Sources */,
 				983EEF9E240560BC009C74AC /* SceneDelegate.swift in Sources */,
+				983EF03F2405685A009C74AC /* main.swift in Sources */,
 				983EEFEC2405621A009C74AC /* MockVCFactory.swift in Sources */,
 				983EEFE32405621A009C74AC /* YellowViewController.swift in Sources */,
 				983EEFEB2405621A009C74AC /* VCFactory.swift in Sources */,
@@ -491,7 +504,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				983EF04B24056CD0009C74AC /* TestingAppDelegate.swift in Sources */,
 				983EF01624056350009C74AC /* VCFactory.swift in Sources */,
+				983EF04E24056CE0009C74AC /* TestingSceneDelegate.swift in Sources */,
 				983EF03124056384009C74AC /* MockVMFactory.swift in Sources */,
 				983EF01924056355009C74AC /* MockVCFactory.swift in Sources */,
 				983EF037240563AB009C74AC /* AppLauncher.swift in Sources */,
@@ -531,8 +546,10 @@
 				983EF01124056339009C74AC /* AppCoordinatorProtocol.swift in Sources */,
 				983EF02324056364009C74AC /* YellowViewController.swift in Sources */,
 				983EF01724056351009C74AC /* VCFactory.swift in Sources */,
+				983EF04D24056CDF009C74AC /* TestingSceneDelegate.swift in Sources */,
 				983EF01A24056356009C74AC /* MockVCFactory.swift in Sources */,
 				983EF0202405635F009C74AC /* YellowViewControllerProtocol.swift in Sources */,
+				983EF04C24056CD0009C74AC /* TestingAppDelegate.swift in Sources */,
 				983EEFFB24056297009C74AC /* TDD_CoordinatorsUITests.swift in Sources */,
 				983EF01424056349009C74AC /* VCFactoryProtocol.swift in Sources */,
 			);
@@ -555,8 +572,10 @@
 				983EF0122405633A009C74AC /* AppCoordinatorProtocol.swift in Sources */,
 				983EF02424056364009C74AC /* YellowViewController.swift in Sources */,
 				983EF01824056351009C74AC /* VCFactory.swift in Sources */,
+				983EF04A240569ED009C74AC /* TestingSceneDelegate.swift in Sources */,
 				983EF01B24056357009C74AC /* MockVCFactory.swift in Sources */,
 				983EF02124056360009C74AC /* YellowViewControllerProtocol.swift in Sources */,
+				983EF047240569E8009C74AC /* TestingAppDelegate.swift in Sources */,
 				983EF003240562E5009C74AC /* TestingAppDelegateTests.swift in Sources */,
 				983EF0152405634A009C74AC /* VCFactoryProtocol.swift in Sources */,
 			);
@@ -748,7 +767,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y983APTU2S;
 				INFOPLIST_FILE = TDD_Coordinators_TestingAppDelegateTests/Info.plist;
@@ -762,7 +780,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TDD_Coordinators_TestingAppDelegate.app/TDD_Coordinators_TestingAppDelegate";
 			};
 			name = Debug;
 		};
@@ -770,7 +787,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y983APTU2S;
 				INFOPLIST_FILE = TDD_Coordinators_TestingAppDelegateTests/Info.plist;
@@ -784,7 +800,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TDD_Coordinators_TestingAppDelegate.app/TDD_Coordinators_TestingAppDelegate";
 			};
 			name = Release;
 		};
