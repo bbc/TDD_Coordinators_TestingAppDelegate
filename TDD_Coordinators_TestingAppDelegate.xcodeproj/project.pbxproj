@@ -9,12 +9,82 @@
 /* Begin PBXBuildFile section */
 		983EEF9C240560BC009C74AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEF9B240560BC009C74AC /* AppDelegate.swift */; };
 		983EEF9E240560BC009C74AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEF9D240560BC009C74AC /* SceneDelegate.swift */; };
-		983EEFA0240560BC009C74AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEF9F240560BC009C74AC /* ViewController.swift */; };
-		983EEFA3240560BC009C74AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 983EEFA1240560BC009C74AC /* Main.storyboard */; };
 		983EEFA5240560BF009C74AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 983EEFA4240560BF009C74AC /* Assets.xcassets */; };
 		983EEFA8240560BF009C74AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 983EEFA6240560BF009C74AC /* LaunchScreen.storyboard */; };
-		983EEFB3240560BF009C74AC /* TDD_Coordinators_TestingAppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFB2240560BF009C74AC /* TDD_Coordinators_TestingAppDelegateTests.swift */; };
-		983EEFBE240560BF009C74AC /* TDD_Coordinators_TestingAppDelegateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFBD240560BF009C74AC /* TDD_Coordinators_TestingAppDelegateUITests.swift */; };
+		983EEFCC24056209009C74AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 983EEFCB24056209009C74AC /* Main.storyboard */; };
+		983EEFE12405621A009C74AC /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFCE24056219009C74AC /* BlueViewController.swift */; };
+		983EEFE22405621A009C74AC /* YellowViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFCF24056219009C74AC /* YellowViewControllerProtocol.swift */; };
+		983EEFE32405621A009C74AC /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD024056219009C74AC /* YellowViewController.swift */; };
+		983EEFE42405621A009C74AC /* MockYellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD124056219009C74AC /* MockYellowViewController.swift */; };
+		983EEFE52405621A009C74AC /* YellowScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD324056219009C74AC /* YellowScreenViewModel.swift */; };
+		983EEFE62405621A009C74AC /* YellowScreenViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD424056219009C74AC /* YellowScreenViewModelProtocol.swift */; };
+		983EEFE72405621A009C74AC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD62405621A009C74AC /* AppCoordinator.swift */; };
+		983EEFE82405621A009C74AC /* MockAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD72405621A009C74AC /* MockAppCoordinator.swift */; };
+		983EEFE92405621A009C74AC /* AppCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD82405621A009C74AC /* AppCoordinatorProtocol.swift */; };
+		983EEFEA2405621A009C74AC /* VCFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFDA2405621A009C74AC /* VCFactoryProtocol.swift */; };
+		983EEFEB2405621A009C74AC /* VCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFDB2405621A009C74AC /* VCFactory.swift */; };
+		983EEFEC2405621A009C74AC /* MockVCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFDC2405621A009C74AC /* MockVCFactory.swift */; };
+		983EEFED2405621A009C74AC /* VMFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFDE2405621A009C74AC /* VMFactoryProtocol.swift */; };
+		983EEFEE2405621A009C74AC /* MockVMFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFDF2405621A009C74AC /* MockVMFactory.swift */; };
+		983EEFEF2405621A009C74AC /* VMFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFE02405621A009C74AC /* VMFactory.swift */; };
+		983EEFF12405624C009C74AC /* AppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFF02405624C009C74AC /* AppLauncher.swift */; };
+		983EEFF62405626E009C74AC /* VCFactory_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFF22405626D009C74AC /* VCFactory_Tests.swift */; };
+		983EEFF72405626E009C74AC /* YellowScreenViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFF32405626D009C74AC /* YellowScreenViewModel_Tests.swift */; };
+		983EEFF82405626E009C74AC /* VMFactory_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFF42405626D009C74AC /* VMFactory_Tests.swift */; };
+		983EEFF92405626E009C74AC /* AppCoordinator_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFF52405626E009C74AC /* AppCoordinator_Tests.swift */; };
+		983EEFFB24056297009C74AC /* TDD_CoordinatorsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFFA24056297009C74AC /* TDD_CoordinatorsUITests.swift */; };
+		983EF003240562E5009C74AC /* TestingAppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EF002240562E5009C74AC /* TestingAppDelegateTests.swift */; };
+		983EF00A2405632D009C74AC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD62405621A009C74AC /* AppCoordinator.swift */; };
+		983EF00B2405632E009C74AC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD62405621A009C74AC /* AppCoordinator.swift */; };
+		983EF00C2405632F009C74AC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD62405621A009C74AC /* AppCoordinator.swift */; };
+		983EF00D24056332009C74AC /* MockAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD72405621A009C74AC /* MockAppCoordinator.swift */; };
+		983EF00E24056334009C74AC /* MockAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD72405621A009C74AC /* MockAppCoordinator.swift */; };
+		983EF00F24056334009C74AC /* MockAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD72405621A009C74AC /* MockAppCoordinator.swift */; };
+		983EF01024056337009C74AC /* AppCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD82405621A009C74AC /* AppCoordinatorProtocol.swift */; };
+		983EF01124056339009C74AC /* AppCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD82405621A009C74AC /* AppCoordinatorProtocol.swift */; };
+		983EF0122405633A009C74AC /* AppCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD82405621A009C74AC /* AppCoordinatorProtocol.swift */; };
+		983EF01324056349009C74AC /* VCFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFDA2405621A009C74AC /* VCFactoryProtocol.swift */; };
+		983EF01424056349009C74AC /* VCFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFDA2405621A009C74AC /* VCFactoryProtocol.swift */; };
+		983EF0152405634A009C74AC /* VCFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFDA2405621A009C74AC /* VCFactoryProtocol.swift */; };
+		983EF01624056350009C74AC /* VCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFDB2405621A009C74AC /* VCFactory.swift */; };
+		983EF01724056351009C74AC /* VCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFDB2405621A009C74AC /* VCFactory.swift */; };
+		983EF01824056351009C74AC /* VCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFDB2405621A009C74AC /* VCFactory.swift */; };
+		983EF01924056355009C74AC /* MockVCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFDC2405621A009C74AC /* MockVCFactory.swift */; };
+		983EF01A24056356009C74AC /* MockVCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFDC2405621A009C74AC /* MockVCFactory.swift */; };
+		983EF01B24056357009C74AC /* MockVCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFDC2405621A009C74AC /* MockVCFactory.swift */; };
+		983EF01C2405635B009C74AC /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFCE24056219009C74AC /* BlueViewController.swift */; };
+		983EF01D2405635B009C74AC /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFCE24056219009C74AC /* BlueViewController.swift */; };
+		983EF01E2405635C009C74AC /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFCE24056219009C74AC /* BlueViewController.swift */; };
+		983EF01F2405635F009C74AC /* YellowViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFCF24056219009C74AC /* YellowViewControllerProtocol.swift */; };
+		983EF0202405635F009C74AC /* YellowViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFCF24056219009C74AC /* YellowViewControllerProtocol.swift */; };
+		983EF02124056360009C74AC /* YellowViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFCF24056219009C74AC /* YellowViewControllerProtocol.swift */; };
+		983EF02224056363009C74AC /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD024056219009C74AC /* YellowViewController.swift */; };
+		983EF02324056364009C74AC /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD024056219009C74AC /* YellowViewController.swift */; };
+		983EF02424056364009C74AC /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD024056219009C74AC /* YellowViewController.swift */; };
+		983EF02524056367009C74AC /* MockYellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD124056219009C74AC /* MockYellowViewController.swift */; };
+		983EF02624056368009C74AC /* MockYellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD124056219009C74AC /* MockYellowViewController.swift */; };
+		983EF02724056369009C74AC /* MockYellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD124056219009C74AC /* MockYellowViewController.swift */; };
+		983EF02824056375009C74AC /* YellowScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD324056219009C74AC /* YellowScreenViewModel.swift */; };
+		983EF02924056376009C74AC /* YellowScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD324056219009C74AC /* YellowScreenViewModel.swift */; };
+		983EF02A24056376009C74AC /* YellowScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD324056219009C74AC /* YellowScreenViewModel.swift */; };
+		983EF02B2405637A009C74AC /* YellowScreenViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD424056219009C74AC /* YellowScreenViewModelProtocol.swift */; };
+		983EF02C2405637A009C74AC /* YellowScreenViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD424056219009C74AC /* YellowScreenViewModelProtocol.swift */; };
+		983EF02D2405637B009C74AC /* YellowScreenViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFD424056219009C74AC /* YellowScreenViewModelProtocol.swift */; };
+		983EF02E24056380009C74AC /* VMFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFDE2405621A009C74AC /* VMFactoryProtocol.swift */; };
+		983EF02F24056380009C74AC /* VMFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFDE2405621A009C74AC /* VMFactoryProtocol.swift */; };
+		983EF03024056381009C74AC /* VMFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFDE2405621A009C74AC /* VMFactoryProtocol.swift */; };
+		983EF03124056384009C74AC /* MockVMFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFDF2405621A009C74AC /* MockVMFactory.swift */; };
+		983EF03224056385009C74AC /* MockVMFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFDF2405621A009C74AC /* MockVMFactory.swift */; };
+		983EF03324056385009C74AC /* MockVMFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFDF2405621A009C74AC /* MockVMFactory.swift */; };
+		983EF03424056389009C74AC /* VMFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFE02405621A009C74AC /* VMFactory.swift */; };
+		983EF0352405638A009C74AC /* VMFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFE02405621A009C74AC /* VMFactory.swift */; };
+		983EF0362405638A009C74AC /* VMFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFE02405621A009C74AC /* VMFactory.swift */; };
+		983EF037240563AB009C74AC /* AppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFF02405624C009C74AC /* AppLauncher.swift */; };
+		983EF038240563AB009C74AC /* AppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFF02405624C009C74AC /* AppLauncher.swift */; };
+		983EF039240563AC009C74AC /* AppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEFF02405624C009C74AC /* AppLauncher.swift */; };
+		983EF03B240565F6009C74AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 983EEFCB24056209009C74AC /* Main.storyboard */; };
+		983EF03C240565F7009C74AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 983EEFCB24056209009C74AC /* Main.storyboard */; };
+		983EF03D240565F7009C74AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 983EEFCB24056209009C74AC /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,23 +102,51 @@
 			remoteGlobalIDString = 983EEF97240560BC009C74AC;
 			remoteInfo = TDD_Coordinators_TestingAppDelegate;
 		};
+		983EF005240562E5009C74AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 983EEF90240560BC009C74AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 983EEF97240560BC009C74AC;
+			remoteInfo = TDD_Coordinators_TestingAppDelegate;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		983EEF98240560BC009C74AC /* TDD_Coordinators_TestingAppDelegate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDD_Coordinators_TestingAppDelegate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		983EEF9B240560BC009C74AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		983EEF9D240560BC009C74AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		983EEF9F240560BC009C74AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		983EEFA2240560BC009C74AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		983EEFA4240560BF009C74AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		983EEFA7240560BF009C74AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		983EEFA9240560BF009C74AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		983EEFAE240560BF009C74AC /* TDD_Coordinators_TestingAppDelegateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDD_Coordinators_TestingAppDelegateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		983EEFB2240560BF009C74AC /* TDD_Coordinators_TestingAppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDD_Coordinators_TestingAppDelegateTests.swift; sourceTree = "<group>"; };
 		983EEFB4240560BF009C74AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		983EEFB9240560BF009C74AC /* TDD_Coordinators_TestingAppDelegateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDD_Coordinators_TestingAppDelegateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		983EEFBD240560BF009C74AC /* TDD_Coordinators_TestingAppDelegateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDD_Coordinators_TestingAppDelegateUITests.swift; sourceTree = "<group>"; };
 		983EEFBF240560BF009C74AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		983EEFCB24056209009C74AC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		983EEFCE24056219009C74AC /* BlueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
+		983EEFCF24056219009C74AC /* YellowViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowViewControllerProtocol.swift; sourceTree = "<group>"; };
+		983EEFD024056219009C74AC /* YellowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
+		983EEFD124056219009C74AC /* MockYellowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockYellowViewController.swift; sourceTree = "<group>"; };
+		983EEFD324056219009C74AC /* YellowScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowScreenViewModel.swift; sourceTree = "<group>"; };
+		983EEFD424056219009C74AC /* YellowScreenViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowScreenViewModelProtocol.swift; sourceTree = "<group>"; };
+		983EEFD62405621A009C74AC /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		983EEFD72405621A009C74AC /* MockAppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAppCoordinator.swift; sourceTree = "<group>"; };
+		983EEFD82405621A009C74AC /* AppCoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		983EEFDA2405621A009C74AC /* VCFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCFactoryProtocol.swift; sourceTree = "<group>"; };
+		983EEFDB2405621A009C74AC /* VCFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCFactory.swift; sourceTree = "<group>"; };
+		983EEFDC2405621A009C74AC /* MockVCFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockVCFactory.swift; sourceTree = "<group>"; };
+		983EEFDE2405621A009C74AC /* VMFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMFactoryProtocol.swift; sourceTree = "<group>"; };
+		983EEFDF2405621A009C74AC /* MockVMFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockVMFactory.swift; sourceTree = "<group>"; };
+		983EEFE02405621A009C74AC /* VMFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMFactory.swift; sourceTree = "<group>"; };
+		983EEFF02405624C009C74AC /* AppLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLauncher.swift; sourceTree = "<group>"; };
+		983EEFF22405626D009C74AC /* VCFactory_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCFactory_Tests.swift; sourceTree = "<group>"; };
+		983EEFF32405626D009C74AC /* YellowScreenViewModel_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowScreenViewModel_Tests.swift; sourceTree = "<group>"; };
+		983EEFF42405626D009C74AC /* VMFactory_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMFactory_Tests.swift; sourceTree = "<group>"; };
+		983EEFF52405626E009C74AC /* AppCoordinator_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator_Tests.swift; sourceTree = "<group>"; };
+		983EEFFA24056297009C74AC /* TDD_CoordinatorsUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDD_CoordinatorsUITests.swift; sourceTree = "<group>"; };
+		983EF000240562E5009C74AC /* TestingAppDelegateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingAppDelegateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		983EF002240562E5009C74AC /* TestingAppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegateTests.swift; sourceTree = "<group>"; };
+		983EF004240562E5009C74AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +171,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		983EEFFD240562E5009C74AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +187,7 @@
 				983EEF9A240560BC009C74AC /* TDD_Coordinators_TestingAppDelegate */,
 				983EEFB1240560BF009C74AC /* TDD_Coordinators_TestingAppDelegateTests */,
 				983EEFBC240560BF009C74AC /* TDD_Coordinators_TestingAppDelegateUITests */,
+				983EF001240562E5009C74AC /* TestingAppDelegateTests */,
 				983EEF99240560BC009C74AC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +198,7 @@
 				983EEF98240560BC009C74AC /* TDD_Coordinators_TestingAppDelegate.app */,
 				983EEFAE240560BF009C74AC /* TDD_Coordinators_TestingAppDelegateTests.xctest */,
 				983EEFB9240560BF009C74AC /* TDD_Coordinators_TestingAppDelegateUITests.xctest */,
+				983EF000240562E5009C74AC /* TestingAppDelegateTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,12 +206,17 @@
 		983EEF9A240560BC009C74AC /* TDD_Coordinators_TestingAppDelegate */ = {
 			isa = PBXGroup;
 			children = (
+				983EEFD52405621A009C74AC /* Coordinators */,
+				983EEFD92405621A009C74AC /* VCFactories */,
+				983EEFCD24056219009C74AC /* ViewControllers */,
+				983EEFD224056219009C74AC /* ViewModels */,
+				983EEFDD2405621A009C74AC /* VMFactories */,
+				983EEFCB24056209009C74AC /* Main.storyboard */,
+				983EEFA6240560BF009C74AC /* LaunchScreen.storyboard */,
+				983EEFF02405624C009C74AC /* AppLauncher.swift */,
 				983EEF9B240560BC009C74AC /* AppDelegate.swift */,
 				983EEF9D240560BC009C74AC /* SceneDelegate.swift */,
-				983EEF9F240560BC009C74AC /* ViewController.swift */,
-				983EEFA1240560BC009C74AC /* Main.storyboard */,
 				983EEFA4240560BF009C74AC /* Assets.xcassets */,
-				983EEFA6240560BF009C74AC /* LaunchScreen.storyboard */,
 				983EEFA9240560BF009C74AC /* Info.plist */,
 			);
 			path = TDD_Coordinators_TestingAppDelegate;
@@ -113,7 +225,10 @@
 		983EEFB1240560BF009C74AC /* TDD_Coordinators_TestingAppDelegateTests */ = {
 			isa = PBXGroup;
 			children = (
-				983EEFB2240560BF009C74AC /* TDD_Coordinators_TestingAppDelegateTests.swift */,
+				983EEFF52405626E009C74AC /* AppCoordinator_Tests.swift */,
+				983EEFF22405626D009C74AC /* VCFactory_Tests.swift */,
+				983EEFF42405626D009C74AC /* VMFactory_Tests.swift */,
+				983EEFF32405626D009C74AC /* YellowScreenViewModel_Tests.swift */,
 				983EEFB4240560BF009C74AC /* Info.plist */,
 			);
 			path = TDD_Coordinators_TestingAppDelegateTests;
@@ -122,10 +237,69 @@
 		983EEFBC240560BF009C74AC /* TDD_Coordinators_TestingAppDelegateUITests */ = {
 			isa = PBXGroup;
 			children = (
-				983EEFBD240560BF009C74AC /* TDD_Coordinators_TestingAppDelegateUITests.swift */,
+				983EEFFA24056297009C74AC /* TDD_CoordinatorsUITests.swift */,
 				983EEFBF240560BF009C74AC /* Info.plist */,
 			);
 			path = TDD_Coordinators_TestingAppDelegateUITests;
+			sourceTree = "<group>";
+		};
+		983EEFCD24056219009C74AC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				983EEFCE24056219009C74AC /* BlueViewController.swift */,
+				983EEFCF24056219009C74AC /* YellowViewControllerProtocol.swift */,
+				983EEFD024056219009C74AC /* YellowViewController.swift */,
+				983EEFD124056219009C74AC /* MockYellowViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		983EEFD224056219009C74AC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				983EEFD324056219009C74AC /* YellowScreenViewModel.swift */,
+				983EEFD424056219009C74AC /* YellowScreenViewModelProtocol.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		983EEFD52405621A009C74AC /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				983EEFD62405621A009C74AC /* AppCoordinator.swift */,
+				983EEFD72405621A009C74AC /* MockAppCoordinator.swift */,
+				983EEFD82405621A009C74AC /* AppCoordinatorProtocol.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		983EEFD92405621A009C74AC /* VCFactories */ = {
+			isa = PBXGroup;
+			children = (
+				983EEFDA2405621A009C74AC /* VCFactoryProtocol.swift */,
+				983EEFDB2405621A009C74AC /* VCFactory.swift */,
+				983EEFDC2405621A009C74AC /* MockVCFactory.swift */,
+			);
+			path = VCFactories;
+			sourceTree = "<group>";
+		};
+		983EEFDD2405621A009C74AC /* VMFactories */ = {
+			isa = PBXGroup;
+			children = (
+				983EEFDE2405621A009C74AC /* VMFactoryProtocol.swift */,
+				983EEFDF2405621A009C74AC /* MockVMFactory.swift */,
+				983EEFE02405621A009C74AC /* VMFactory.swift */,
+			);
+			path = VMFactories;
+			sourceTree = "<group>";
+		};
+		983EF001240562E5009C74AC /* TestingAppDelegateTests */ = {
+			isa = PBXGroup;
+			children = (
+				983EF002240562E5009C74AC /* TestingAppDelegateTests.swift */,
+				983EF004240562E5009C74AC /* Info.plist */,
+			);
+			path = TestingAppDelegateTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +358,24 @@
 			productReference = 983EEFB9240560BF009C74AC /* TDD_Coordinators_TestingAppDelegateUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		983EEFFF240562E5009C74AC /* TestingAppDelegateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 983EF007240562E5009C74AC /* Build configuration list for PBXNativeTarget "TestingAppDelegateTests" */;
+			buildPhases = (
+				983EEFFC240562E5009C74AC /* Sources */,
+				983EEFFD240562E5009C74AC /* Frameworks */,
+				983EEFFE240562E5009C74AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				983EF006240562E5009C74AC /* PBXTargetDependency */,
+			);
+			name = TestingAppDelegateTests;
+			productName = TestingAppDelegateTests;
+			productReference = 983EF000240562E5009C74AC /* TestingAppDelegateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,6 +397,10 @@
 						CreatedOnToolsVersion = 11.2.1;
 						TestTargetID = 983EEF97240560BC009C74AC;
 					};
+					983EEFFF240562E5009C74AC = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 983EEF97240560BC009C74AC;
+					};
 				};
 			};
 			buildConfigurationList = 983EEF93240560BC009C74AC /* Build configuration list for PBXProject "TDD_Coordinators_TestingAppDelegate" */;
@@ -223,6 +419,7 @@
 				983EEF97240560BC009C74AC /* TDD_Coordinators_TestingAppDelegate */,
 				983EEFAD240560BF009C74AC /* TDD_Coordinators_TestingAppDelegateTests */,
 				983EEFB8240560BF009C74AC /* TDD_Coordinators_TestingAppDelegateUITests */,
+				983EEFFF240562E5009C74AC /* TestingAppDelegateTests */,
 			);
 		};
 /* End PBXProject section */
@@ -232,9 +429,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				983EEFCC24056209009C74AC /* Main.storyboard in Resources */,
 				983EEFA8240560BF009C74AC /* LaunchScreen.storyboard in Resources */,
 				983EEFA5240560BF009C74AC /* Assets.xcassets in Resources */,
-				983EEFA3240560BC009C74AC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +439,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				983EF03B240565F6009C74AC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +447,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				983EF03C240565F7009C74AC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		983EEFFE240562E5009C74AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				983EF03D240565F7009C74AC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +466,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				983EEFA0240560BC009C74AC /* ViewController.swift in Sources */,
+				983EEFE92405621A009C74AC /* AppCoordinatorProtocol.swift in Sources */,
+				983EEFE62405621A009C74AC /* YellowScreenViewModelProtocol.swift in Sources */,
+				983EEFE42405621A009C74AC /* MockYellowViewController.swift in Sources */,
+				983EEFEE2405621A009C74AC /* MockVMFactory.swift in Sources */,
+				983EEFED2405621A009C74AC /* VMFactoryProtocol.swift in Sources */,
+				983EEFEF2405621A009C74AC /* VMFactory.swift in Sources */,
+				983EEFE52405621A009C74AC /* YellowScreenViewModel.swift in Sources */,
 				983EEF9C240560BC009C74AC /* AppDelegate.swift in Sources */,
+				983EEFE12405621A009C74AC /* BlueViewController.swift in Sources */,
+				983EEFE22405621A009C74AC /* YellowViewControllerProtocol.swift in Sources */,
+				983EEFE82405621A009C74AC /* MockAppCoordinator.swift in Sources */,
+				983EEFF12405624C009C74AC /* AppLauncher.swift in Sources */,
+				983EEFE72405621A009C74AC /* AppCoordinator.swift in Sources */,
+				983EEFEA2405621A009C74AC /* VCFactoryProtocol.swift in Sources */,
 				983EEF9E240560BC009C74AC /* SceneDelegate.swift in Sources */,
+				983EEFEC2405621A009C74AC /* MockVCFactory.swift in Sources */,
+				983EEFE32405621A009C74AC /* YellowViewController.swift in Sources */,
+				983EEFEB2405621A009C74AC /* VCFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +491,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				983EEFB3240560BF009C74AC /* TDD_Coordinators_TestingAppDelegateTests.swift in Sources */,
+				983EF01624056350009C74AC /* VCFactory.swift in Sources */,
+				983EF03124056384009C74AC /* MockVMFactory.swift in Sources */,
+				983EF01924056355009C74AC /* MockVCFactory.swift in Sources */,
+				983EF037240563AB009C74AC /* AppLauncher.swift in Sources */,
+				983EF01024056337009C74AC /* AppCoordinatorProtocol.swift in Sources */,
+				983EEFF92405626E009C74AC /* AppCoordinator_Tests.swift in Sources */,
+				983EEFF82405626E009C74AC /* VMFactory_Tests.swift in Sources */,
+				983EF02224056363009C74AC /* YellowViewController.swift in Sources */,
+				983EF00A2405632D009C74AC /* AppCoordinator.swift in Sources */,
+				983EF01F2405635F009C74AC /* YellowViewControllerProtocol.swift in Sources */,
+				983EF02B2405637A009C74AC /* YellowScreenViewModelProtocol.swift in Sources */,
+				983EF03424056389009C74AC /* VMFactory.swift in Sources */,
+				983EF02524056367009C74AC /* MockYellowViewController.swift in Sources */,
+				983EEFF62405626E009C74AC /* VCFactory_Tests.swift in Sources */,
+				983EF01324056349009C74AC /* VCFactoryProtocol.swift in Sources */,
+				983EF02824056375009C74AC /* YellowScreenViewModel.swift in Sources */,
+				983EF00D24056332009C74AC /* MockAppCoordinator.swift in Sources */,
+				983EEFF72405626E009C74AC /* YellowScreenViewModel_Tests.swift in Sources */,
+				983EF02E24056380009C74AC /* VMFactoryProtocol.swift in Sources */,
+				983EF01C2405635B009C74AC /* BlueViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +518,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				983EEFBE240560BF009C74AC /* TDD_Coordinators_TestingAppDelegateUITests.swift in Sources */,
+				983EF00B2405632E009C74AC /* AppCoordinator.swift in Sources */,
+				983EF02F24056380009C74AC /* VMFactoryProtocol.swift in Sources */,
+				983EF00E24056334009C74AC /* MockAppCoordinator.swift in Sources */,
+				983EF038240563AB009C74AC /* AppLauncher.swift in Sources */,
+				983EF02924056376009C74AC /* YellowScreenViewModel.swift in Sources */,
+				983EF01D2405635B009C74AC /* BlueViewController.swift in Sources */,
+				983EF0352405638A009C74AC /* VMFactory.swift in Sources */,
+				983EF02624056368009C74AC /* MockYellowViewController.swift in Sources */,
+				983EF02C2405637A009C74AC /* YellowScreenViewModelProtocol.swift in Sources */,
+				983EF03224056385009C74AC /* MockVMFactory.swift in Sources */,
+				983EF01124056339009C74AC /* AppCoordinatorProtocol.swift in Sources */,
+				983EF02324056364009C74AC /* YellowViewController.swift in Sources */,
+				983EF01724056351009C74AC /* VCFactory.swift in Sources */,
+				983EF01A24056356009C74AC /* MockVCFactory.swift in Sources */,
+				983EF0202405635F009C74AC /* YellowViewControllerProtocol.swift in Sources */,
+				983EEFFB24056297009C74AC /* TDD_CoordinatorsUITests.swift in Sources */,
+				983EF01424056349009C74AC /* VCFactoryProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		983EEFFC240562E5009C74AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				983EF00C2405632F009C74AC /* AppCoordinator.swift in Sources */,
+				983EF03024056381009C74AC /* VMFactoryProtocol.swift in Sources */,
+				983EF00F24056334009C74AC /* MockAppCoordinator.swift in Sources */,
+				983EF039240563AC009C74AC /* AppLauncher.swift in Sources */,
+				983EF02A24056376009C74AC /* YellowScreenViewModel.swift in Sources */,
+				983EF01E2405635C009C74AC /* BlueViewController.swift in Sources */,
+				983EF0362405638A009C74AC /* VMFactory.swift in Sources */,
+				983EF02724056369009C74AC /* MockYellowViewController.swift in Sources */,
+				983EF02D2405637B009C74AC /* YellowScreenViewModelProtocol.swift in Sources */,
+				983EF03324056385009C74AC /* MockVMFactory.swift in Sources */,
+				983EF0122405633A009C74AC /* AppCoordinatorProtocol.swift in Sources */,
+				983EF02424056364009C74AC /* YellowViewController.swift in Sources */,
+				983EF01824056351009C74AC /* VCFactory.swift in Sources */,
+				983EF01B24056357009C74AC /* MockVCFactory.swift in Sources */,
+				983EF02124056360009C74AC /* YellowViewControllerProtocol.swift in Sources */,
+				983EF003240562E5009C74AC /* TestingAppDelegateTests.swift in Sources */,
+				983EF0152405634A009C74AC /* VCFactoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,17 +575,14 @@
 			target = 983EEF97240560BC009C74AC /* TDD_Coordinators_TestingAppDelegate */;
 			targetProxy = 983EEFBA240560BF009C74AC /* PBXContainerItemProxy */;
 		};
+		983EF006240562E5009C74AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 983EEF97240560BC009C74AC /* TDD_Coordinators_TestingAppDelegate */;
+			targetProxy = 983EF005240562E5009C74AC /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		983EEFA1240560BC009C74AC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				983EEFA2240560BC009C74AC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		983EEFA6240560BF009C74AC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -550,6 +828,46 @@
 			};
 			name = Release;
 		};
+		983EF008240562E5009C74AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y983APTU2S;
+				INFOPLIST_FILE = TestingAppDelegateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.bbc.emma.walker02.TestingAppDelegateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TDD_Coordinators_TestingAppDelegate.app/TDD_Coordinators_TestingAppDelegate";
+			};
+			name = Debug;
+		};
+		983EF009240562E5009C74AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y983APTU2S;
+				INFOPLIST_FILE = TestingAppDelegateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.bbc.emma.walker02.TestingAppDelegateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TDD_Coordinators_TestingAppDelegate.app/TDD_Coordinators_TestingAppDelegate";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -585,6 +903,15 @@
 			buildConfigurations = (
 				983EEFC9240560BF009C74AC /* Debug */,
 				983EEFCA240560BF009C74AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		983EF007240562E5009C74AC /* Build configuration list for PBXNativeTarget "TestingAppDelegateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				983EF008240562E5009C74AC /* Debug */,
+				983EF009240562E5009C74AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
