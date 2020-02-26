@@ -13,18 +13,18 @@ public class MockVCFactory: VCFactoryProtocol {
     
     public init() {}
         
-    public var yellowScreenExists = false
-    public var blueScreenExists = false
     public var yellowVM: YellowScreenViewModelProtocol?
     
     public func makeYellowScreen(yellowViewModel: YellowScreenViewModelProtocol) -> UIViewController {
-        yellowScreenExists = true
         yellowVM = yellowViewModel
-        return YellowViewController()
+        //if we are using the storyboard here is this really a mock at all?
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle:Bundle(for: type(of: self)))
+        let yellowViewController = storyboard.instantiateViewController(identifier: "YellowViewController") as! YellowViewController
+        yellowViewController.yellowVM = yellowViewModel
+        return yellowViewController
     }
     
     public func makeBlueScreen() -> UIViewController {
-        blueScreenExists = true
         return BlueViewController()
     }
     

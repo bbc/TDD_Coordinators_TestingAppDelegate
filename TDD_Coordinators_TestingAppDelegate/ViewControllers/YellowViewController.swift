@@ -19,7 +19,7 @@ class YellowViewController: UIViewController, YellowViewControllerProtocol {
         view.backgroundColor = .yellow
         view.accessibilityIdentifier = "yellowVC"
         view.tag = 1
-        if let blueScreenButtonLabel = showBlueScreenButton.titleLabel {
+        if let blueScreenButtonLabel = showBlueScreenButton?.titleLabel {
             blueScreenButtonLabel.attributedText = NSAttributedString(string: "Show Blue Screen")}
         showBlueScreenButton.accessibilityIdentifier = "Show Blue Screen"
         

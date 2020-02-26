@@ -18,6 +18,5 @@ class AppLauncher {
     
     func launchApp(){
         _ = AppCoordinator(vcFactory: VCFactory(), vmFactory: VMFactory(), window: self.window)
-        window.makeKeyAndVisible()
     }
 }

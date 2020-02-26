@@ -9,36 +9,31 @@
 import XCTest
 
 class VCFactory_Tests: XCTestCase {
-
-
+    
+    
     func testGivenACoordinatorWhenVCFactoryIsCalledItReturnsAVC() {
         //arrange
         let vcFactory = VCFactory()
-        let mockAppCoordinator = MockAppCoordinator(vcFactory: vcFactory, vmFactory: MockVMFactory(), window: UIWindow())
-  
         //act
-       // mockAppCoordinator.showYellowScreen()
-        
+        let yellowVC = vcFactory.makeYellowScreen(yellowViewModel: YellowScreenViewModel()) as? YellowViewController
         //assert
-        XCTAssertNotNil(mockAppCoordinator.yellowVC)
-        XCTAssertNotNil(mockAppCoordinator.yellowVC!.yellowVM)
+        XCTAssertNotNil(yellowVC)
+        XCTAssertNotNil(yellowVC?.yellowVM)
     }
     
     func testGivenAYellowScreenWhenTheButtonIsPressedVCFactoryReturnsABlueVC() {
-          //arrange
-          let vcFactory = VCFactory()
-          let mockAppCoordinator = MockAppCoordinator(vcFactory: vcFactory, vmFactory: MockVMFactory(), window: UIWindow())
-    
-          //act
-          mockAppCoordinator.showBlueScreen()
-          //assert
-          XCTAssertNotNil(mockAppCoordinator.blueVC)
+        //arrange
+        let vcFactory = VCFactory()
+        //act
+        let blueVC = vcFactory.makeBlueScreen()
+        //assert
+        XCTAssertNotNil(blueVC)
         
     }
     
-
     
-
+    
+    
 }
 
 

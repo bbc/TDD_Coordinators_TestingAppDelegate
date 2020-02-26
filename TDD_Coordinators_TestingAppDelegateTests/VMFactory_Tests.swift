@@ -12,12 +12,14 @@ class VMFactory_Tests: XCTestCase {
     
 
     func testGivenAnAppCoordinatorWhenVMFactoryIsCalledItReturnsAVM(){
-        //arrange
-        let mockAppCoordinator = MockAppCoordinator(vcFactory: MockVCFactory(), vmFactory: VMFactory(), window: UIWindow())
+        //arranger
+        let viewModelFactory = VMFactory()
+        viewModelFactory.appCoordinator = MockAppCoordinator(vcFactory: MockVCFactory(), vmFactory: viewModelFactory, window: UIWindow())
         //act
+        let yellowViewModel = viewModelFactory.makeYellowScreenViewModel()
         //assert
-        XCTAssertNotNil(mockAppCoordinator.yellowScreenVM)
-        XCTAssertNotNil(mockAppCoordinator.yellowScreenVM?.appCoordinator)
+        XCTAssertNotNil(yellowViewModel)
+        XCTAssertNotNil(yellowViewModel.appCoordinator)
     }
 
 }

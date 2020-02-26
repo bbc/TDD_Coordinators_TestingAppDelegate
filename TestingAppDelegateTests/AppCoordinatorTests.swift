@@ -8,30 +8,29 @@
 
 import XCTest
 
-class TestingAppDelegateTests: XCTestCase {
+class AppCoordinatorTests: XCTestCase {
 
     func testGivenYouAreOnYellowVCWhenButtonIsPressedThenBlueVCIsNAvigatedToUsingAWindow() {
         
         let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first!
-        let appCoordinator = AppCoordinator(vcFactory: VCFactory(), vmFactory: VMFactory(), window: window)
+        let appCoordinator = AppCoordinator(vcFactory: MockVCFactory(), vmFactory: MockVMFactory(), window: window)
         
         appCoordinator.showBlueScreen()
         
+        XCTAssertNotNil(appCoordinator.blueVC)
         XCTAssertNotNil(window.viewWithTag(2))
-        XCTAssertFalse(window.viewWithTag(2)!.isHidden)
-        
-        
     }
     
     
     func testThatTheDefaultScreenIsYellow(){
         let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first!
-        let appCoordinator = AppCoordinator(vcFactory: VCFactory(), vmFactory: VMFactory(), window: window)
+        let appCoordinator = AppCoordinator(vcFactory: MockVCFactory(), vmFactory: MockVMFactory(), window: window)
         
         appCoordinator.showYellowScreen()
-
+        
+        XCTAssertNotNil(appCoordinator.yellowVC)
+        XCTAssertNotNil(appCoordinator.yellowScreenVM)
         XCTAssertNotNil(window.viewWithTag(1))
-        XCTAssertFalse(window.viewWithTag(1)!.isHidden)
     }
     
     
