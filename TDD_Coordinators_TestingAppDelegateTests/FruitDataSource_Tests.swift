@@ -11,7 +11,7 @@ import XCTest
 class FruitDataSource_Tests: XCTestCase {
     
     struct Fruit {
-        
+        let title = "Strawberry"
     }
     
     struct FruitDataSource {
@@ -25,6 +25,10 @@ class FruitDataSource_Tests: XCTestCase {
         func numberOfRows(inSection: Int) -> Int {
             guard inSection == 0 else {return 0}
             return fruitList.count
+        }
+        
+        func item(forRow: Int, inSection: Int) -> Fruit {
+            return Fruit()
         }
     }
 
@@ -41,6 +45,12 @@ class FruitDataSource_Tests: XCTestCase {
         XCTAssertEqual(datasource.numberOfRows(inSection: 0), 3)
         XCTAssertEqual(datasource.numberOfRows(inSection: 1), 0)
         XCTAssertEqual(datasource.numberOfRows(inSection: -1), 0)
+    }
+    
+    func testFruitForItsRowAndSection(){
+        let datasource = FruitDataSource(fruitList: [Fruit(), Fruit(), Fruit()])
+        
+        XCTAssertEqual(datasource.item(forRow: 0, inSection: 0).title, "Strawberry")
     }
 
 }
