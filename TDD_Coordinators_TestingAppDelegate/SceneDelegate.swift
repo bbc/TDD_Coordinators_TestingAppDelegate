@@ -17,12 +17,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-//        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-//        window?.windowScene = windowScene
-//        if let window = window{
-//            let appLauncher = AppLauncher(window: window)
-//            appLauncher.launchApp()
-//        }
+        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window?.windowScene = windowScene
+        if let window = window{
+            let appLauncher = AppLauncher(window: window)
+            appLauncher.launchApp()
+        }
         
     }
     
