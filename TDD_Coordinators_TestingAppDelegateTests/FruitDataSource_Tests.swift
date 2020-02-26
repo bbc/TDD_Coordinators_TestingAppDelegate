@@ -23,7 +23,7 @@ class FruitDataSource_Tests: XCTestCase {
         }
     
         func numberOfRows(inSection: Int) -> Int {
-            return 3
+            return fruitList.count
         }
     }
 
