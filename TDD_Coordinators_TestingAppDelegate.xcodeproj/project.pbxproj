@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		982B79252406BABA0051FFC8 /* FruitDataSource_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982B79242406BABA0051FFC8 /* FruitDataSource_Tests.swift */; };
 		983EEF9C240560BC009C74AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEF9B240560BC009C74AC /* AppDelegate.swift */; };
 		983EEF9E240560BC009C74AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EEF9D240560BC009C74AC /* SceneDelegate.swift */; };
 		983EEFA5240560BF009C74AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 983EEFA4240560BF009C74AC /* Assets.xcassets */; };
@@ -91,6 +92,7 @@
 		983EF04C24056CD0009C74AC /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EF04124056912009C74AC /* TestingAppDelegate.swift */; };
 		983EF04D24056CDF009C74AC /* TestingSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EF0432405695A009C74AC /* TestingSceneDelegate.swift */; };
 		983EF04E24056CE0009C74AC /* TestingSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EF0432405695A009C74AC /* TestingSceneDelegate.swift */; };
+		98A68E662406B804005D2F80 /* BlueScreenViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A68E652406B804005D2F80 /* BlueScreenViewModel_Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +120,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		982B79242406BABA0051FFC8 /* FruitDataSource_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitDataSource_Tests.swift; sourceTree = "<group>"; };
 		983EEF98240560BC009C74AC /* TDD_Coordinators_TestingAppDelegate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDD_Coordinators_TestingAppDelegate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		983EEF9B240560BC009C74AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		983EEF9D240560BC009C74AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +158,7 @@
 		983EF03E2405685A009C74AC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		983EF04124056912009C74AC /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		983EF0432405695A009C74AC /* TestingSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingSceneDelegate.swift; sourceTree = "<group>"; };
+		98A68E652406B804005D2F80 /* BlueScreenViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueScreenViewModel_Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +242,8 @@
 				983EEFF42405626D009C74AC /* VMFactory_Tests.swift */,
 				983EEFF32405626D009C74AC /* YellowScreenViewModel_Tests.swift */,
 				983EEFB4240560BF009C74AC /* Info.plist */,
+				98A68E652406B804005D2F80 /* BlueScreenViewModel_Tests.swift */,
+				982B79242406BABA0051FFC8 /* FruitDataSource_Tests.swift */,
 			);
 			path = TDD_Coordinators_TestingAppDelegateTests;
 			sourceTree = "<group>";
@@ -513,7 +519,9 @@
 				983EF00A2405632D009C74AC /* AppCoordinator.swift in Sources */,
 				983EF01F2405635F009C74AC /* YellowViewControllerProtocol.swift in Sources */,
 				983EF02B2405637A009C74AC /* YellowScreenViewModelProtocol.swift in Sources */,
+				98A68E662406B804005D2F80 /* BlueScreenViewModel_Tests.swift in Sources */,
 				983EF03424056389009C74AC /* VMFactory.swift in Sources */,
+				982B79252406BABA0051FFC8 /* FruitDataSource_Tests.swift in Sources */,
 				983EF02524056367009C74AC /* MockYellowViewController.swift in Sources */,
 				983EEFF62405626E009C74AC /* VCFactory_Tests.swift in Sources */,
 				983EF01324056349009C74AC /* VCFactoryProtocol.swift in Sources */,
