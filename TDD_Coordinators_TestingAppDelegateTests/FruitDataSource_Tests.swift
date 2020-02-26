@@ -12,6 +12,10 @@ class FruitDataSource_Tests: XCTestCase {
     
     struct FruitDataSource {
         var numberOfSections = 1
+        
+        func numberOfRows(inSection: Int) -> Int {
+            return 3
+        }
     }
 
     func testThereIsOneSectionOfFruit(){
@@ -21,5 +25,10 @@ class FruitDataSource_Tests: XCTestCase {
         
     }
     
+    func testNumberOFRowsOfFruit(){
+        let datasource = FruitDataSource()
+        
+        XCTAssertEqual(datasource.numberOfRows(inSection: 0), 3)
+    }
 
 }
