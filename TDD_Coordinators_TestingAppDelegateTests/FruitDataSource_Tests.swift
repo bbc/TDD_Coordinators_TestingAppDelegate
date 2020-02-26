@@ -22,17 +22,17 @@ class FruitDataSource_Tests: XCTestCase {
         init(fruitList: [Fruit]) {
             self.fruitList = fruitList
         }
-    
+        
         func numberOfRows(inSection: Int) -> Int {
             guard inSection == 0 else {return 0}
             return fruitList.count
         }
         
-        func item(forRow: Int, inSection: Int) -> Fruit {
-            return .fixture()
+        func item(forRow row: Int, inSection section: Int) -> Fruit {
+            return fruitList[row]
         }
     }
-
+    
     func testThereIsOneSectionOfFruit(){
         let datasource = FruitDataSource(fruitList: [.fixture()])
         
@@ -52,8 +52,9 @@ class FruitDataSource_Tests: XCTestCase {
         let datasource = FruitDataSource(fruitList: [.fixture(name: "Strawberry"), .fixture(name: "Banana")])
         
         XCTAssertEqual(datasource.item(forRow: 0, inSection: 0).type, "Strawberry")
+        XCTAssertEqual(datasource.item(forRow: 1, inSection: 0).type, "Banana")
     }
-
+    
 }
 
 extension Fruit {
