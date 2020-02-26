@@ -8,11 +8,12 @@
 
 import XCTest
 
+struct Fruit {
+    let title = "Strawberry"
+}
+
+
 class FruitDataSource_Tests: XCTestCase {
-    
-    struct Fruit {
-        let title = "Strawberry"
-    }
     
     struct FruitDataSource {
         var numberOfSections = 1
@@ -33,14 +34,14 @@ class FruitDataSource_Tests: XCTestCase {
     }
 
     func testThereIsOneSectionOfFruit(){
-        let datasource = FruitDataSource(fruitList: [Fruit()])
+        let datasource = FruitDataSource(fruitList: [.fixture()])
         
         XCTAssertEqual(datasource.numberOfSections, 1)
         
     }
     
     func testNumberOFRowsOfFruit(){
-        let datasource = FruitDataSource(fruitList: [Fruit(), Fruit(), Fruit()])
+        let datasource = FruitDataSource(fruitList: [.fixture(), .fixture(), .fixture()])
         
         XCTAssertEqual(datasource.numberOfRows(inSection: 0), 3)
         XCTAssertEqual(datasource.numberOfRows(inSection: 1), 0)
@@ -48,9 +49,15 @@ class FruitDataSource_Tests: XCTestCase {
     }
     
     func testFruitForItsRowAndSection(){
-        let datasource = FruitDataSource(fruitList: [Fruit(), Fruit(), Fruit()])
+        let datasource = FruitDataSource(fruitList: [.fixture(), .fixture(), .fixture()])
         
         XCTAssertEqual(datasource.item(forRow: 0, inSection: 0).title, "Strawberry")
     }
 
+}
+
+extension Fruit {
+    static func fixture() -> Fruit {
+        return Fruit()
+    }
 }
