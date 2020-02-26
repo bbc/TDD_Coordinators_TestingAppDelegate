@@ -23,6 +23,7 @@ class FruitDataSource_Tests: XCTestCase {
         }
     
         func numberOfRows(inSection: Int) -> Int {
+            guard inSection == 0 else {return 0}
             return fruitList.count
         }
     }
@@ -38,6 +39,8 @@ class FruitDataSource_Tests: XCTestCase {
         let datasource = FruitDataSource(fruitList: [Fruit(), Fruit(), Fruit()])
         
         XCTAssertEqual(datasource.numberOfRows(inSection: 0), 3)
+        XCTAssertEqual(datasource.numberOfRows(inSection: 1), 0)
+        XCTAssertEqual(datasource.numberOfRows(inSection: -1), 0)
     }
 
 }
