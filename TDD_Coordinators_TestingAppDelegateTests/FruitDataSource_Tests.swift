@@ -10,23 +10,32 @@ import XCTest
 
 class FruitDataSource_Tests: XCTestCase {
     
+    struct Fruit {
+        
+    }
+    
     struct FruitDataSource {
         var numberOfSections = 1
+        let fruitList: [Fruit]
         
+        init(fruitList: [Fruit]) {
+            self.fruitList = fruitList
+        }
+    
         func numberOfRows(inSection: Int) -> Int {
             return 3
         }
     }
 
     func testThereIsOneSectionOfFruit(){
-        let datasource = FruitDataSource()
+        let datasource = FruitDataSource(fruitList: [Fruit()])
         
         XCTAssertEqual(datasource.numberOfSections, 1)
         
     }
     
     func testNumberOFRowsOfFruit(){
-        let datasource = FruitDataSource()
+        let datasource = FruitDataSource(fruitList: [Fruit(), Fruit(), Fruit()])
         
         XCTAssertEqual(datasource.numberOfRows(inSection: 0), 3)
     }
