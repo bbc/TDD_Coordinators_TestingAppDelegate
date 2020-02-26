@@ -9,7 +9,7 @@
 import XCTest
 
 struct Fruit {
-    let title = "Strawberry"
+    let type: String
 }
 
 
@@ -29,7 +29,7 @@ class FruitDataSource_Tests: XCTestCase {
         }
         
         func item(forRow: Int, inSection: Int) -> Fruit {
-            return Fruit()
+            return .fixture()
         }
     }
 
@@ -49,15 +49,15 @@ class FruitDataSource_Tests: XCTestCase {
     }
     
     func testFruitForItsRowAndSection(){
-        let datasource = FruitDataSource(fruitList: [.fixture(), .fixture(), .fixture()])
+        let datasource = FruitDataSource(fruitList: [.fixture(name: "Strawberry"), .fixture(name: "Banana")])
         
-        XCTAssertEqual(datasource.item(forRow: 0, inSection: 0).title, "Strawberry")
+        XCTAssertEqual(datasource.item(forRow: 0, inSection: 0).type, "Strawberry")
     }
 
 }
 
 extension Fruit {
-    static func fixture() -> Fruit {
-        return Fruit()
+    static func fixture(name: String = "Strawberry") -> Fruit {
+        return Fruit(type: name)
     }
 }
