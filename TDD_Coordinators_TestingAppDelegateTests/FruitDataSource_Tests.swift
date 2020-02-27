@@ -16,28 +16,28 @@ struct Fruit {
     }
 }
 
+struct FruitDataSource {
+    var numberOfSections = 1
+    let fruitList: [Fruit]
+    
+    init(fruitList: [Fruit]) {
+        self.fruitList = fruitList
+    }
+    
+    func numberOfRows(inSection section: Int) -> Int {
+        guard section == 0 else {return 0}
+        return fruitList.count
+    }
+    
+    func item(forRow row: Int, inSection section: Int) -> Fruit? {
+        guard section == 0 else {return .none}
+        guard row >= 0, fruitList.count > row else {return .none}
+        return fruitList[row]
+    }
+}
 
 class FruitDataSource_Tests: XCTestCase {
     
-    struct FruitDataSource {
-        var numberOfSections = 1
-        let fruitList: [Fruit]
-        
-        init(fruitList: [Fruit]) {
-            self.fruitList = fruitList
-        }
-        
-        func numberOfRows(inSection: Int) -> Int {
-            guard inSection == 0 else {return 0}
-            return fruitList.count
-        }
-        
-        func item(forRow row: Int, inSection section: Int) -> Fruit? {
-            guard section == 0 else {return .none}
-            guard row >= 0, fruitList.count > row else {return .none}
-            return fruitList[row]
-        }
-    }
     
     func testThereIsOneSectionOfFruit(){
         let datasource = FruitDataSource(fruitList: [.fixture()])
