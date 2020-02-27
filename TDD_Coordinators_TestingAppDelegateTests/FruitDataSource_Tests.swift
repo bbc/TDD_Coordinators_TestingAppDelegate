@@ -47,11 +47,11 @@ class FruitDataSource {
         return fruitList!.count
     }
     
-    func item(forRow row: Int, inSection section: Int) -> Fruit? {
+    func string(forRow row: Int, inSection section: Int) -> String? {
         guard section == 0 else {return .none}
         guard fruitList != nil else {return .none}
         guard row >= 0, fruitList!.count > row else {return .none}
-        return fruitList![row]
+        return fruitList![row].type
     }
 }
 
@@ -79,18 +79,18 @@ class FruitDataSource_Tests: XCTestCase {
         let mockDataService = MockDataService(fruitList: [.fixture(name: "Strawberry"), .fixture(name: "Banana")])
         let dataSource = FruitDataSource(dataService: mockDataService)
         
-        XCTAssertEqual(dataSource.item(forRow: 0, inSection: 0)?.type, "Strawberry")
-        XCTAssertEqual(dataSource.item(forRow: 1, inSection: 0)?.type, "Banana")
+        XCTAssertEqual(dataSource.string(forRow: 0, inSection: 0), "Strawberry")
+        XCTAssertEqual(dataSource.string(forRow: 1, inSection: 0), "Banana")
     }
     
     func testFruitForOutOfBoundsRowAndSectionIsNill() {
         let mockDataService = MockDataService(fruitList: [.fixture(name: "Strawberry"), .fixture(name: "Banana")])
         let dataSource = FruitDataSource(dataService: mockDataService)
         
-        XCTAssertNil(dataSource.item(forRow: 2, inSection: 0))
-        XCTAssertNil(dataSource.item(forRow: 0, inSection: 1))
-        XCTAssertNil(dataSource.item(forRow: 2, inSection: 1))
-        XCTAssertNil(dataSource.item(forRow: -1, inSection: -1))
+        XCTAssertNil(dataSource.string(forRow: 2, inSection: 0))
+        XCTAssertNil(dataSource.string(forRow: 0, inSection: 1))
+        XCTAssertNil(dataSource.string(forRow: 2, inSection: 1))
+        XCTAssertNil(dataSource.string(forRow: -1, inSection: -1))
     }
     
     
@@ -115,10 +115,14 @@ class FruitDataSource_Tests: XCTestCase {
         let mockDataService = MockDataService(fruitList: .none)
         let dataSource = FruitDataSource(dataService: mockDataService)
         
-        let itemReturned = dataSource.item(forRow: 0, inSection: 0)
+        let itemReturned = dataSource.string(forRow: 0, inSection: 0)
         
         XCTAssertNil(itemReturned)
     }
+    
+
+    
+    
     
 }
 
