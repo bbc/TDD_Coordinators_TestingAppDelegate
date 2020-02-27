@@ -8,59 +8,13 @@
 
 import XCTest
 
-struct Fruit {
-    let type: String
-    
-    init(type: String) {
-        self.type = type
-    }
-}
 
-class MockDataService: DataServiceProtocol {
-    
-    var fruitList: [Fruit]?
-    
-    init(fruitList: [Fruit]?) {
-        self.fruitList = fruitList
-    }
-    
-    func getFruit() -> [Fruit]? {
-        return self.fruitList
-    }
-    
-    
-}
-
-class FruitDataSource {
-    var numberOfSections = 1
-    var fruitList: [Fruit]? = nil
-    var dataService: DataServiceProtocol?
-    
-    init(dataService: DataServiceProtocol?) {
-        self.dataService = dataService
-        fruitList = dataService?.getFruit()
-    }
-    
-    func numberOfRows(inSection section: Int) -> Int {
-        guard section == 0 else {return 0}
-        guard fruitList != nil else {return 0}
-        return fruitList!.count
-    }
-    
-    func string(forRow row: Int, inSection section: Int) -> String? {
-        guard section == 0 else {return .none}
-        guard fruitList != nil else {return .none}
-        guard row >= 0, fruitList!.count > row else {return .none}
-        return fruitList![row].type
-    }
-}
-
-class FruitDataSource_Tests: XCTestCase {
+class BlueScreenViewModel_Tests: XCTestCase {
     
     
     func testThereIsOneSectionOfFruit(){
         let mockDataService = MockDataService(fruitList: [.fixture()])
-        let dataSource = FruitDataSource(dataService: mockDataService)
+        let dataSource = BlueScreenViewModel(dataService: mockDataService)
         
         XCTAssertEqual(dataSource.numberOfSections, 1)
         
@@ -68,7 +22,7 @@ class FruitDataSource_Tests: XCTestCase {
     
     func testNumberOFRowsOfFruit(){
         let mockDataService = MockDataService(fruitList: [.fixture(), .fixture(), .fixture()])
-        let dataSource = FruitDataSource(dataService: mockDataService)
+        let dataSource = BlueScreenViewModel(dataService: mockDataService)
         
         XCTAssertEqual(dataSource.numberOfRows(inSection: 0), 3)
         XCTAssertEqual(dataSource.numberOfRows(inSection: 1), 0)
@@ -77,7 +31,7 @@ class FruitDataSource_Tests: XCTestCase {
     
     func testFruitForItsRowAndSection(){
         let mockDataService = MockDataService(fruitList: [.fixture(name: "Strawberry"), .fixture(name: "Banana")])
-        let dataSource = FruitDataSource(dataService: mockDataService)
+        let dataSource = BlueScreenViewModel(dataService: mockDataService)
         
         XCTAssertEqual(dataSource.string(forRow: 0, inSection: 0), "Strawberry")
         XCTAssertEqual(dataSource.string(forRow: 1, inSection: 0), "Banana")
@@ -85,7 +39,7 @@ class FruitDataSource_Tests: XCTestCase {
     
     func testFruitForOutOfBoundsRowAndSectionIsNill() {
         let mockDataService = MockDataService(fruitList: [.fixture(name: "Strawberry"), .fixture(name: "Banana")])
-        let dataSource = FruitDataSource(dataService: mockDataService)
+        let dataSource = BlueScreenViewModel(dataService: mockDataService)
         
         XCTAssertNil(dataSource.string(forRow: 2, inSection: 0))
         XCTAssertNil(dataSource.string(forRow: 0, inSection: 1))
@@ -96,14 +50,14 @@ class FruitDataSource_Tests: XCTestCase {
     
     func testTestThatFruitListIsReturned() {
         let mockDataService = MockDataService(fruitList: [.fixture()])
-        let dataSource = FruitDataSource(dataService: mockDataService)
+        let dataSource = BlueScreenViewModel(dataService: mockDataService)
         
         XCTAssertNotNil(dataSource.fruitList)
     }
     
     func testNumberOfRowsForNilFruitListIsZero() {
         let mockDataService = MockDataService(fruitList: .none)
-        let dataSource = FruitDataSource(dataService: mockDataService)
+        let dataSource = BlueScreenViewModel(dataService: mockDataService)
         
         let numberOfRows = dataSource.numberOfRows(inSection: 0)
         
@@ -113,16 +67,12 @@ class FruitDataSource_Tests: XCTestCase {
     
     func testItemReturnedIsNilWhenTheFruitListIsNil() {
         let mockDataService = MockDataService(fruitList: .none)
-        let dataSource = FruitDataSource(dataService: mockDataService)
+        let dataSource = BlueScreenViewModel(dataService: mockDataService)
         
         let itemReturned = dataSource.string(forRow: 0, inSection: 0)
         
         XCTAssertNil(itemReturned)
     }
-    
-
-    
-    
     
 }
 
@@ -132,6 +82,4 @@ extension Fruit {
     }
 }
 
-protocol DataServiceProtocol {
-    func getFruit() -> [Fruit]?
-}
+

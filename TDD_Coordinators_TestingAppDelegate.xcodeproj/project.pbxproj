@@ -92,7 +92,22 @@
 		983EF04C24056CD0009C74AC /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EF04124056912009C74AC /* TestingAppDelegate.swift */; };
 		983EF04D24056CDF009C74AC /* TestingSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EF0432405695A009C74AC /* TestingSceneDelegate.swift */; };
 		983EF04E24056CE0009C74AC /* TestingSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EF0432405695A009C74AC /* TestingSceneDelegate.swift */; };
-		98A68E662406B804005D2F80 /* BlueScreenViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A68E652406B804005D2F80 /* BlueScreenViewModel_Tests.swift */; };
+		989D22322408247A00C378D0 /* DataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D22312408247A00C378D0 /* DataServiceProtocol.swift */; };
+		989D2234240824A000C378D0 /* DataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D22312408247A00C378D0 /* DataServiceProtocol.swift */; };
+		989D2235240824A000C378D0 /* DataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D22312408247A00C378D0 /* DataServiceProtocol.swift */; };
+		989D22362408252C00C378D0 /* DataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D22312408247A00C378D0 /* DataServiceProtocol.swift */; };
+		989D22382408254D00C378D0 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D22372408254D00C378D0 /* Fruit.swift */; };
+		989D22392408255700C378D0 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D22372408254D00C378D0 /* Fruit.swift */; };
+		989D223A2408255700C378D0 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D22372408254D00C378D0 /* Fruit.swift */; };
+		989D223B2408255800C378D0 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D22372408254D00C378D0 /* Fruit.swift */; };
+		989D223D2408257A00C378D0 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D223C2408257A00C378D0 /* MockDataService.swift */; };
+		989D223E2408258500C378D0 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D223C2408257A00C378D0 /* MockDataService.swift */; };
+		989D223F2408258500C378D0 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D223C2408257A00C378D0 /* MockDataService.swift */; };
+		989D22402408258500C378D0 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D223C2408257A00C378D0 /* MockDataService.swift */; };
+		989D2242240825BD00C378D0 /* BlueScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D2241240825BD00C378D0 /* BlueScreenViewModel.swift */; };
+		989D2243240825BD00C378D0 /* BlueScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D2241240825BD00C378D0 /* BlueScreenViewModel.swift */; };
+		989D2244240825BD00C378D0 /* BlueScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D2241240825BD00C378D0 /* BlueScreenViewModel.swift */; };
+		989D2245240825BD00C378D0 /* BlueScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D2241240825BD00C378D0 /* BlueScreenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,7 +173,10 @@
 		983EF03E2405685A009C74AC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		983EF04124056912009C74AC /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		983EF0432405695A009C74AC /* TestingSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingSceneDelegate.swift; sourceTree = "<group>"; };
-		98A68E652406B804005D2F80 /* BlueScreenViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueScreenViewModel_Tests.swift; sourceTree = "<group>"; };
+		989D22312408247A00C378D0 /* DataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceProtocol.swift; sourceTree = "<group>"; };
+		989D22372408254D00C378D0 /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
+		989D223C2408257A00C378D0 /* MockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataService.swift; sourceTree = "<group>"; };
+		989D2241240825BD00C378D0 /* BlueScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueScreenViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +236,8 @@
 		983EEF9A240560BC009C74AC /* TDD_Coordinators_TestingAppDelegate */ = {
 			isa = PBXGroup;
 			children = (
+				989D22332408249800C378D0 /* Models */,
+				989D22302408246400C378D0 /* Services */,
 				983EEFD52405621A009C74AC /* Coordinators */,
 				983EEFD92405621A009C74AC /* VCFactories */,
 				983EEFCD24056219009C74AC /* ViewControllers */,
@@ -242,7 +262,6 @@
 				983EEFF42405626D009C74AC /* VMFactory_Tests.swift */,
 				983EEFF32405626D009C74AC /* YellowScreenViewModel_Tests.swift */,
 				983EEFB4240560BF009C74AC /* Info.plist */,
-				98A68E652406B804005D2F80 /* BlueScreenViewModel_Tests.swift */,
 				982B79242406BABA0051FFC8 /* FruitDataSource_Tests.swift */,
 			);
 			path = TDD_Coordinators_TestingAppDelegateTests;
@@ -273,6 +292,7 @@
 			children = (
 				983EEFD324056219009C74AC /* YellowScreenViewModel.swift */,
 				983EEFD424056219009C74AC /* YellowScreenViewModelProtocol.swift */,
+				989D2241240825BD00C378D0 /* BlueScreenViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -316,6 +336,23 @@
 				983EF004240562E5009C74AC /* Info.plist */,
 			);
 			path = TestingAppDelegateTests;
+			sourceTree = "<group>";
+		};
+		989D22302408246400C378D0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				989D22312408247A00C378D0 /* DataServiceProtocol.swift */,
+				989D223C2408257A00C378D0 /* MockDataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		989D22332408249800C378D0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				989D22372408254D00C378D0 /* Fruit.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,8 +521,10 @@
 				983EEFE92405621A009C74AC /* AppCoordinatorProtocol.swift in Sources */,
 				983EEFE62405621A009C74AC /* YellowScreenViewModelProtocol.swift in Sources */,
 				983EEFE42405621A009C74AC /* MockYellowViewController.swift in Sources */,
+				989D223D2408257A00C378D0 /* MockDataService.swift in Sources */,
 				983EEFEE2405621A009C74AC /* MockVMFactory.swift in Sources */,
 				983EEFED2405621A009C74AC /* VMFactoryProtocol.swift in Sources */,
+				989D22322408247A00C378D0 /* DataServiceProtocol.swift in Sources */,
 				983EEFEF2405621A009C74AC /* VMFactory.swift in Sources */,
 				983EEFE52405621A009C74AC /* YellowScreenViewModel.swift in Sources */,
 				983EEF9C240560BC009C74AC /* AppDelegate.swift in Sources */,
@@ -498,7 +537,9 @@
 				983EEF9E240560BC009C74AC /* SceneDelegate.swift in Sources */,
 				983EF03F2405685A009C74AC /* main.swift in Sources */,
 				983EEFEC2405621A009C74AC /* MockVCFactory.swift in Sources */,
+				989D22382408254D00C378D0 /* Fruit.swift in Sources */,
 				983EEFE32405621A009C74AC /* YellowViewController.swift in Sources */,
+				989D2242240825BD00C378D0 /* BlueScreenViewModel.swift in Sources */,
 				983EEFEB2405621A009C74AC /* VCFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,18 +553,21 @@
 				983EF04E24056CE0009C74AC /* TestingSceneDelegate.swift in Sources */,
 				983EF03124056384009C74AC /* MockVMFactory.swift in Sources */,
 				983EF01924056355009C74AC /* MockVCFactory.swift in Sources */,
+				989D22392408255700C378D0 /* Fruit.swift in Sources */,
 				983EF037240563AB009C74AC /* AppLauncher.swift in Sources */,
 				983EF01024056337009C74AC /* AppCoordinatorProtocol.swift in Sources */,
 				983EEFF82405626E009C74AC /* VMFactory_Tests.swift in Sources */,
+				989D2243240825BD00C378D0 /* BlueScreenViewModel.swift in Sources */,
 				983EF02224056363009C74AC /* YellowViewController.swift in Sources */,
+				989D2234240824A000C378D0 /* DataServiceProtocol.swift in Sources */,
 				983EF00A2405632D009C74AC /* AppCoordinator.swift in Sources */,
 				983EF01F2405635F009C74AC /* YellowViewControllerProtocol.swift in Sources */,
 				983EF02B2405637A009C74AC /* YellowScreenViewModelProtocol.swift in Sources */,
-				98A68E662406B804005D2F80 /* BlueScreenViewModel_Tests.swift in Sources */,
 				983EF03424056389009C74AC /* VMFactory.swift in Sources */,
 				982B79252406BABA0051FFC8 /* FruitDataSource_Tests.swift in Sources */,
 				983EF02524056367009C74AC /* MockYellowViewController.swift in Sources */,
 				983EEFF62405626E009C74AC /* VCFactory_Tests.swift in Sources */,
+				989D223E2408258500C378D0 /* MockDataService.swift in Sources */,
 				983EF01324056349009C74AC /* VCFactoryProtocol.swift in Sources */,
 				983EF02824056375009C74AC /* YellowScreenViewModel.swift in Sources */,
 				983EF00D24056332009C74AC /* MockAppCoordinator.swift in Sources */,
@@ -540,8 +584,10 @@
 				983EF00B2405632E009C74AC /* AppCoordinator.swift in Sources */,
 				983EF02F24056380009C74AC /* VMFactoryProtocol.swift in Sources */,
 				983EF00E24056334009C74AC /* MockAppCoordinator.swift in Sources */,
+				989D223F2408258500C378D0 /* MockDataService.swift in Sources */,
 				983EF038240563AB009C74AC /* AppLauncher.swift in Sources */,
 				983EF02924056376009C74AC /* YellowScreenViewModel.swift in Sources */,
+				989D2235240824A000C378D0 /* DataServiceProtocol.swift in Sources */,
 				983EF01D2405635B009C74AC /* BlueViewController.swift in Sources */,
 				983EF0352405638A009C74AC /* VMFactory.swift in Sources */,
 				983EF02624056368009C74AC /* MockYellowViewController.swift in Sources */,
@@ -554,7 +600,9 @@
 				983EF01A24056356009C74AC /* MockVCFactory.swift in Sources */,
 				983EF0202405635F009C74AC /* YellowViewControllerProtocol.swift in Sources */,
 				983EF04C24056CD0009C74AC /* TestingAppDelegate.swift in Sources */,
+				989D223A2408255700C378D0 /* Fruit.swift in Sources */,
 				983EEFFB24056297009C74AC /* TDD_CoordinatorsUITests.swift in Sources */,
+				989D2244240825BD00C378D0 /* BlueScreenViewModel.swift in Sources */,
 				983EF01424056349009C74AC /* VCFactoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -566,8 +614,10 @@
 				983EF00C2405632F009C74AC /* AppCoordinator.swift in Sources */,
 				983EF03024056381009C74AC /* VMFactoryProtocol.swift in Sources */,
 				983EF00F24056334009C74AC /* MockAppCoordinator.swift in Sources */,
+				989D22402408258500C378D0 /* MockDataService.swift in Sources */,
 				983EF039240563AC009C74AC /* AppLauncher.swift in Sources */,
 				983EF02A24056376009C74AC /* YellowScreenViewModel.swift in Sources */,
+				989D22362408252C00C378D0 /* DataServiceProtocol.swift in Sources */,
 				983EF01E2405635C009C74AC /* BlueViewController.swift in Sources */,
 				983EF0362405638A009C74AC /* VMFactory.swift in Sources */,
 				983EF02724056369009C74AC /* MockYellowViewController.swift in Sources */,
@@ -580,7 +630,9 @@
 				983EF01B24056357009C74AC /* MockVCFactory.swift in Sources */,
 				983EF02124056360009C74AC /* YellowViewControllerProtocol.swift in Sources */,
 				983EF047240569E8009C74AC /* TestingAppDelegate.swift in Sources */,
+				989D223B2408255800C378D0 /* Fruit.swift in Sources */,
 				983EF003240562E5009C74AC /* AppCoordinatorTests.swift in Sources */,
+				989D2245240825BD00C378D0 /* BlueScreenViewModel.swift in Sources */,
 				983EF0152405634A009C74AC /* VCFactoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
