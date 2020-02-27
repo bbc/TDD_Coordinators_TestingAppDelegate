@@ -16,59 +16,87 @@ struct Fruit {
     }
 }
 
-struct FruitDataSource {
-    var numberOfSections = 1
-    let fruitList: [Fruit]
+class MockDataService: DataServiceProtocol {
+    
+    var fruitList: [Fruit]
     
     init(fruitList: [Fruit]) {
         self.fruitList = fruitList
     }
     
+    func getFruit() -> [Fruit]? {
+        return self.fruitList
+    }
+    
+    
+}
+
+class FruitDataSource {
+    var numberOfSections = 1
+    var fruitList: [Fruit]? = nil
+    var dataService: DataServiceProtocol?
+    
+    init(dataService: DataServiceProtocol?) {
+        self.dataService = dataService
+        fruitList = dataService?.getFruit()
+    }
+    
     func numberOfRows(inSection section: Int) -> Int {
         guard section == 0 else {return 0}
-        return fruitList.count
+        return fruitList!.count
     }
     
     func item(forRow row: Int, inSection section: Int) -> Fruit? {
         guard section == 0 else {return .none}
-        guard row >= 0, fruitList.count > row else {return .none}
-        return fruitList[row]
+        guard row >= 0, fruitList!.count > row else {return .none}
+        return fruitList![row]
     }
 }
 
 class FruitDataSource_Tests: XCTestCase {
     
     
-    func testThereIsOneSectionOfFruit(){
-        let datasource = FruitDataSource(fruitList: [.fixture()])
-        
-        XCTAssertEqual(datasource.numberOfSections, 1)
-        
-    }
+        func testThereIsOneSectionOfFruit(){
+            let mockDataService = MockDataService(fruitList: [.fixture()])
+            let dataSource = FruitDataSource(dataService: mockDataService)
     
-    func testNumberOFRowsOfFruit(){
-        let datasource = FruitDataSource(fruitList: [.fixture(), .fixture(), .fixture()])
-        
-        XCTAssertEqual(datasource.numberOfRows(inSection: 0), 3)
-        XCTAssertEqual(datasource.numberOfRows(inSection: 1), 0)
-        XCTAssertEqual(datasource.numberOfRows(inSection: -1), 0)
-    }
+            XCTAssertEqual(dataSource.numberOfSections, 1)
     
-    func testFruitForItsRowAndSection(){
-        let datasource = FruitDataSource(fruitList: [.fixture(name: "Strawberry"), .fixture(name: "Banana")])
-        
-        XCTAssertEqual(datasource.item(forRow: 0, inSection: 0)?.type, "Strawberry")
-        XCTAssertEqual(datasource.item(forRow: 1, inSection: 0)?.type, "Banana")
-    }
+        }
     
-    func testFruitForOutOfBoundsRowAndSectionIsNill() {
-        let dataSource = FruitDataSource(fruitList: [.fixture(name: "Strawberry"), .fixture(name: "Banana")])
+        func testNumberOFRowsOfFruit(){
+            let mockDataService = MockDataService(fruitList: [.fixture(), .fixture(), .fixture()])
+            let dataSource = FruitDataSource(dataService: mockDataService)
+    
+            XCTAssertEqual(dataSource.numberOfRows(inSection: 0), 3)
+            XCTAssertEqual(dataSource.numberOfRows(inSection: 1), 0)
+            XCTAssertEqual(dataSource.numberOfRows(inSection: -1), 0)
+        }
+    
+        func testFruitForItsRowAndSection(){
+            let mockDataService = MockDataService(fruitList: [.fixture(name: "Strawberry"), .fixture(name: "Banana")])
+            let dataSource = FruitDataSource(dataService: mockDataService)
+    
+            XCTAssertEqual(dataSource.item(forRow: 0, inSection: 0)?.type, "Strawberry")
+            XCTAssertEqual(dataSource.item(forRow: 1, inSection: 0)?.type, "Banana")
+        }
+    
+        func testFruitForOutOfBoundsRowAndSectionIsNill() {
+            let mockDataService = MockDataService(fruitList: [.fixture(name: "Strawberry"), .fixture(name: "Banana")])
+            let dataSource = FruitDataSource(dataService: mockDataService)
+    
+            XCTAssertNil(dataSource.item(forRow: 2, inSection: 0))
+            XCTAssertNil(dataSource.item(forRow: 0, inSection: 1))
+            XCTAssertNil(dataSource.item(forRow: 2, inSection: 1))
+            XCTAssertNil(dataSource.item(forRow: -1, inSection: -1))
+        }
+    
+    
+    func testTestThatFruitListIsReturned() {
+        let mockDataService = MockDataService(fruitList: [.fixture()])
+        let dataSource = FruitDataSource(dataService: mockDataService)
         
-        XCTAssertNil(dataSource.item(forRow: 2, inSection: 0))
-        XCTAssertNil(dataSource.item(forRow: 0, inSection: 1))
-        XCTAssertNil(dataSource.item(forRow: 2, inSection: 1))
-        XCTAssertNil(dataSource.item(forRow: -1, inSection: -1))
-
+        XCTAssertNotNil(dataSource.fruitList)
     }
     
 }
@@ -77,4 +105,8 @@ extension Fruit {
     static func fixture(name: String = "Strawberry") -> Fruit {
         return Fruit(type: name)
     }
+}
+
+protocol DataServiceProtocol {
+    func getFruit() -> [Fruit]?
 }
