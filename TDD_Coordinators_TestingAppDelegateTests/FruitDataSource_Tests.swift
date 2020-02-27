@@ -18,9 +18,9 @@ struct Fruit {
 
 class MockDataService: DataServiceProtocol {
     
-    var fruitList: [Fruit]
+    var fruitList: [Fruit]?
     
-    init(fruitList: [Fruit]) {
+    init(fruitList: [Fruit]?) {
         self.fruitList = fruitList
     }
     
@@ -43,6 +43,7 @@ class FruitDataSource {
     
     func numberOfRows(inSection section: Int) -> Int {
         guard section == 0 else {return 0}
+        guard fruitList != nil else {return 0}
         return fruitList!.count
     }
     
@@ -97,6 +98,16 @@ class FruitDataSource_Tests: XCTestCase {
         let dataSource = FruitDataSource(dataService: mockDataService)
         
         XCTAssertNotNil(dataSource.fruitList)
+    }
+    
+    func testNumberOfRowsForNilFruitListIsZero() {
+        let mockDataService = MockDataService(fruitList: .none)
+        let dataSource = FruitDataSource(dataService: mockDataService)
+        
+        let numberOfRows = dataSource.numberOfRows(inSection: 0)
+        
+        XCTAssertEqual(numberOfRows, 0)
+        
     }
     
 }
