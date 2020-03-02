@@ -12,7 +12,7 @@ class BlueScreenViewModel {
     var numberOfSections = 1
     var fruitList: [Fruit]? = nil
     var dataService: DataServiceProtocol?
-    var delegate: BlueScreenViewModelDelegate?
+    weak var delegate: BlueScreenViewModelDelegate?
     
     init(dataService: DataServiceProtocol?) {
         self.dataService = dataService
@@ -37,6 +37,6 @@ class BlueScreenViewModel {
     }
 }
 
-protocol BlueScreenViewModelDelegate {
+protocol BlueScreenViewModelDelegate: class {
     func didGetData()
 }

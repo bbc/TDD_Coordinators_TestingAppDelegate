@@ -14,20 +14,20 @@ class MockDataService: DataServiceProtocol {
     
     var error: NetworkingError?
     
+    var completionHandler: (([Fruit]?, NetworkingError?) -> Void)?
+    
     init(fruitList: [Fruit]?, error: NetworkingError?) {
         self.fruitList = fruitList
         self.error = error
     }
     
     func getFruit(completion: @escaping ([Fruit]?, NetworkingError?) -> Void) {
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) { // Change `2.0` to the desired number of seconds.
-//            // Code you want to be delayed
-//            completion(self.fruitList, self.error)
-//        }
-                completion(self.fruitList, self.error)
-        
+        self.completionHandler = completion
     }
     
+    func performGetFruitCompletion(){
+        self.completionHandler!(fruitList, nil)
+    }
     
     
 }

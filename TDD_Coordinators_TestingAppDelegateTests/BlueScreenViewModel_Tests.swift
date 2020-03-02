@@ -25,6 +25,8 @@ class BlueScreenViewModel_Tests: XCTestCase {
         let mockDataService = MockDataService(fruitList: [.fixture(), .fixture(), .fixture()], error: nil)
         let dataSource = BlueScreenViewModel(dataService: mockDataService)
         
+        mockDataService.performGetFruitCompletion()
+        
         XCTAssertEqual(dataSource.numberOfRows(inSection: 0), 3)
         XCTAssertEqual(dataSource.numberOfRows(inSection: 1), 0)
         XCTAssertEqual(dataSource.numberOfRows(inSection: -1), 0)
@@ -33,7 +35,8 @@ class BlueScreenViewModel_Tests: XCTestCase {
     func testFruitForItsRowAndSection(){
         let mockDataService = MockDataService(fruitList: [.fixture(name: "Strawberry"), .fixture(name: "Banana")], error: nil)
         let dataSource = BlueScreenViewModel(dataService: mockDataService)
-        
+        mockDataService.performGetFruitCompletion()
+
         XCTAssertEqual(dataSource.string(forRow: 0, inSection: 0), "Strawberry")
         XCTAssertEqual(dataSource.string(forRow: 1, inSection: 0), "Banana")
     }
@@ -52,6 +55,8 @@ class BlueScreenViewModel_Tests: XCTestCase {
     func testTestThatFruitListIsReturned() {
         let mockDataService = MockDataService(fruitList: [.fixture()], error: nil)
         let dataSource = BlueScreenViewModel(dataService: mockDataService)
+        
+        mockDataService.performGetFruitCompletion()
         
         XCTAssertNotNil(dataSource.fruitList)
     }
