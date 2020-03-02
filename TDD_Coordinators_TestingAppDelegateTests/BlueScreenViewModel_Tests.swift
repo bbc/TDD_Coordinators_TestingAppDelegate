@@ -10,10 +10,10 @@ import XCTest
 
 
 class BlueScreenViewModel_Tests: XCTestCase {
-    
+  
     
     func testThereIsOneSectionOfFruit(){
-        let mockDataService = MockDataService(fruitList: [.fixture()])
+        let mockDataService = MockDataService(fruitList: [.fixture()], error: nil)
         let dataSource = BlueScreenViewModel(dataService: mockDataService)
         
         XCTAssertEqual(dataSource.numberOfSections, 1)
@@ -21,7 +21,8 @@ class BlueScreenViewModel_Tests: XCTestCase {
     }
     
     func testNumberOFRowsOfFruit(){
-        let mockDataService = MockDataService(fruitList: [.fixture(), .fixture(), .fixture()])
+        
+        let mockDataService = MockDataService(fruitList: [.fixture(), .fixture(), .fixture()], error: nil)
         let dataSource = BlueScreenViewModel(dataService: mockDataService)
         
         XCTAssertEqual(dataSource.numberOfRows(inSection: 0), 3)
@@ -30,7 +31,7 @@ class BlueScreenViewModel_Tests: XCTestCase {
     }
     
     func testFruitForItsRowAndSection(){
-        let mockDataService = MockDataService(fruitList: [.fixture(name: "Strawberry"), .fixture(name: "Banana")])
+        let mockDataService = MockDataService(fruitList: [.fixture(name: "Strawberry"), .fixture(name: "Banana")], error: nil)
         let dataSource = BlueScreenViewModel(dataService: mockDataService)
         
         XCTAssertEqual(dataSource.string(forRow: 0, inSection: 0), "Strawberry")
@@ -38,7 +39,7 @@ class BlueScreenViewModel_Tests: XCTestCase {
     }
     
     func testFruitForOutOfBoundsRowAndSectionIsNill() {
-        let mockDataService = MockDataService(fruitList: [.fixture(name: "Strawberry"), .fixture(name: "Banana")])
+        let mockDataService = MockDataService(fruitList: [.fixture(name: "Strawberry"), .fixture(name: "Banana")], error: nil)
         let dataSource = BlueScreenViewModel(dataService: mockDataService)
         
         XCTAssertNil(dataSource.string(forRow: 2, inSection: 0))
@@ -49,14 +50,14 @@ class BlueScreenViewModel_Tests: XCTestCase {
     
     
     func testTestThatFruitListIsReturned() {
-        let mockDataService = MockDataService(fruitList: [.fixture()])
+        let mockDataService = MockDataService(fruitList: [.fixture()], error: nil)
         let dataSource = BlueScreenViewModel(dataService: mockDataService)
         
         XCTAssertNotNil(dataSource.fruitList)
     }
     
     func testNumberOfRowsForNilFruitListIsZero() {
-        let mockDataService = MockDataService(fruitList: .none)
+        let mockDataService = MockDataService(fruitList: .none, error: nil)
         let dataSource = BlueScreenViewModel(dataService: mockDataService)
         
         let numberOfRows = dataSource.numberOfRows(inSection: 0)
@@ -66,7 +67,7 @@ class BlueScreenViewModel_Tests: XCTestCase {
     }
     
     func testItemReturnedIsNilWhenTheFruitListIsNil() {
-        let mockDataService = MockDataService(fruitList: .none)
+        let mockDataService = MockDataService(fruitList: .none, error: nil)
         let dataSource = BlueScreenViewModel(dataService: mockDataService)
         
         let itemReturned = dataSource.string(forRow: 0, inSection: 0)

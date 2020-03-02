@@ -12,10 +12,15 @@ class BlueScreenViewModel {
     var numberOfSections = 1
     var fruitList: [Fruit]? = nil
     var dataService: DataServiceProtocol?
+    var delegate: BlueScreenViewModelDelegate?
     
     init(dataService: DataServiceProtocol?) {
         self.dataService = dataService
-        fruitList = dataService?.getFruit()
+        // should we have a capture list here?
+        dataService?.getFruit(completion: { (fruitList, error) in
+            self.fruitList = fruitList
+            self.delegate?.didGetData()
+        })
     }
     
     func numberOfRows(inSection section: Int) -> Int {
@@ -30,4 +35,8 @@ class BlueScreenViewModel {
         guard row >= 0, fruitList!.count > row else {return .none}
         return fruitList![row].type
     }
+}
+
+protocol BlueScreenViewModelDelegate {
+    func didGetData()
 }

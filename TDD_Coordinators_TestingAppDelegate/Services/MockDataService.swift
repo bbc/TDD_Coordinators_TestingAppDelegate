@@ -12,13 +12,22 @@ class MockDataService: DataServiceProtocol {
     
     var fruitList: [Fruit]?
     
-    init(fruitList: [Fruit]?) {
+    var error: NetworkingError?
+    
+    init(fruitList: [Fruit]?, error: NetworkingError?) {
         self.fruitList = fruitList
+        self.error = error
     }
     
-    func getFruit() -> [Fruit]? {
-        return self.fruitList
+    func getFruit(completion: @escaping ([Fruit]?, NetworkingError?) -> Void) {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) { // Change `2.0` to the desired number of seconds.
+//            // Code you want to be delayed
+//            completion(self.fruitList, self.error)
+//        }
+                completion(self.fruitList, self.error)
+        
     }
+    
     
     
 }
