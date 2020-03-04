@@ -11,6 +11,14 @@
 		2CE4B87A240FBFFA00BFF98A /* BlueScreenViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B878240FBFD700BFF98A /* BlueScreenViewModelProtocol.swift */; };
 		2CE4B87B240FBFFB00BFF98A /* BlueScreenViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B878240FBFD700BFF98A /* BlueScreenViewModelProtocol.swift */; };
 		2CE4B87C240FBFFC00BFF98A /* BlueScreenViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B878240FBFD700BFF98A /* BlueScreenViewModelProtocol.swift */; };
+		2CE4B87E240FC88600BFF98A /* MockBlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B87D240FC88600BFF98A /* MockBlueViewController.swift */; };
+		2CE4B87F240FC89D00BFF98A /* MockBlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B87D240FC88600BFF98A /* MockBlueViewController.swift */; };
+		2CE4B880240FC89E00BFF98A /* MockBlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B87D240FC88600BFF98A /* MockBlueViewController.swift */; };
+		2CE4B881240FC89F00BFF98A /* MockBlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B87D240FC88600BFF98A /* MockBlueViewController.swift */; };
+		2CE4B883240FC8BD00BFF98A /* BlueViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B882240FC8BD00BFF98A /* BlueViewControllerProtocol.swift */; };
+		2CE4B884240FC8BD00BFF98A /* BlueViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B882240FC8BD00BFF98A /* BlueViewControllerProtocol.swift */; };
+		2CE4B885240FC8BD00BFF98A /* BlueViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B882240FC8BD00BFF98A /* BlueViewControllerProtocol.swift */; };
+		2CE4B886240FC8BD00BFF98A /* BlueViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B882240FC8BD00BFF98A /* BlueViewControllerProtocol.swift */; };
 		981574CE240D594300505525 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981574CD240D594300505525 /* NetworkingError.swift */; };
 		981574CF240D595600505525 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981574CD240D594300505525 /* NetworkingError.swift */; };
 		981574D0240D595700505525 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981574CD240D594300505525 /* NetworkingError.swift */; };
@@ -144,6 +152,8 @@
 
 /* Begin PBXFileReference section */
 		2CE4B878240FBFD700BFF98A /* BlueScreenViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueScreenViewModelProtocol.swift; sourceTree = "<group>"; };
+		2CE4B87D240FC88600BFF98A /* MockBlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBlueViewController.swift; sourceTree = "<group>"; };
+		2CE4B882240FC8BD00BFF98A /* BlueViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewControllerProtocol.swift; sourceTree = "<group>"; };
 		981574CD240D594300505525 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		983EEF98240560BC009C74AC /* TDD_Coordinators_TestingAppDelegate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDD_Coordinators_TestingAppDelegate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		983EEF9B240560BC009C74AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -302,6 +312,8 @@
 				983EEFCF24056219009C74AC /* YellowViewControllerProtocol.swift */,
 				983EEFD024056219009C74AC /* YellowViewController.swift */,
 				983EEFD124056219009C74AC /* MockYellowViewController.swift */,
+				2CE4B87D240FC88600BFF98A /* MockBlueViewController.swift */,
+				2CE4B882240FC8BD00BFF98A /* BlueViewControllerProtocol.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -540,6 +552,8 @@
 			files = (
 				983EEFE92405621A009C74AC /* AppCoordinatorProtocol.swift in Sources */,
 				983EEFE62405621A009C74AC /* YellowScreenViewModelProtocol.swift in Sources */,
+				2CE4B87E240FC88600BFF98A /* MockBlueViewController.swift in Sources */,
+				2CE4B883240FC8BD00BFF98A /* BlueViewControllerProtocol.swift in Sources */,
 				983EEFE42405621A009C74AC /* MockYellowViewController.swift in Sources */,
 				989D223D2408257A00C378D0 /* MockDataService.swift in Sources */,
 				983EEFEE2405621A009C74AC /* MockVMFactory.swift in Sources */,
@@ -574,6 +588,7 @@
 				983EF01624056350009C74AC /* VCFactory.swift in Sources */,
 				983EF04E24056CE0009C74AC /* TestingSceneDelegate.swift in Sources */,
 				989D2247240828B800C378D0 /* BlueScreenViewModel_Tests.swift in Sources */,
+				2CE4B87F240FC89D00BFF98A /* MockBlueViewController.swift in Sources */,
 				981574CF240D595600505525 /* NetworkingError.swift in Sources */,
 				983EF03124056384009C74AC /* MockVMFactory.swift in Sources */,
 				2CE4B87A240FBFFA00BFF98A /* BlueScreenViewModelProtocol.swift in Sources */,
@@ -581,6 +596,7 @@
 				989D22392408255700C378D0 /* Fruit.swift in Sources */,
 				983EF037240563AB009C74AC /* AppLauncher.swift in Sources */,
 				983EF01024056337009C74AC /* AppCoordinatorProtocol.swift in Sources */,
+				2CE4B884240FC8BD00BFF98A /* BlueViewControllerProtocol.swift in Sources */,
 				983EEFF82405626E009C74AC /* VMFactory_Tests.swift in Sources */,
 				989D2243240825BD00C378D0 /* BlueScreenViewModel.swift in Sources */,
 				983EF02224056363009C74AC /* YellowViewController.swift in Sources */,
@@ -607,6 +623,8 @@
 			files = (
 				983EF00B2405632E009C74AC /* AppCoordinator.swift in Sources */,
 				983EF02F24056380009C74AC /* VMFactoryProtocol.swift in Sources */,
+				2CE4B880240FC89E00BFF98A /* MockBlueViewController.swift in Sources */,
+				2CE4B885240FC8BD00BFF98A /* BlueViewControllerProtocol.swift in Sources */,
 				983EF00E24056334009C74AC /* MockAppCoordinator.swift in Sources */,
 				989D223F2408258500C378D0 /* MockDataService.swift in Sources */,
 				983EF038240563AB009C74AC /* AppLauncher.swift in Sources */,
@@ -639,6 +657,8 @@
 			files = (
 				983EF00C2405632F009C74AC /* AppCoordinator.swift in Sources */,
 				983EF03024056381009C74AC /* VMFactoryProtocol.swift in Sources */,
+				2CE4B881240FC89F00BFF98A /* MockBlueViewController.swift in Sources */,
+				2CE4B886240FC8BD00BFF98A /* BlueViewControllerProtocol.swift in Sources */,
 				983EF00F24056334009C74AC /* MockAppCoordinator.swift in Sources */,
 				989D22402408258500C378D0 /* MockDataService.swift in Sources */,
 				983EF039240563AC009C74AC /* AppLauncher.swift in Sources */,

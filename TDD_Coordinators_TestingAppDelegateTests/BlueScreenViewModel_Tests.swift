@@ -105,7 +105,7 @@ class BlueScreenViewModel_Tests: XCTestCase {
     func testWhenFruitListIsReturnedDidGetDataIsCalledAndDidGetErrorIsNot() {
         let mockDataService = MockDataService(fruitList: [.fixture(name: "Strawberry"), .fixture(name: "Banana")], error: nil)
         let dataSource = BlueScreenViewModel(dataService: mockDataService)
-        let mockBlueVC = MockBlueVC(blueVM: dataSource)
+        let mockBlueVC = MockBlueViewController(blueVM: dataSource)
         dataSource.delegate = mockBlueVC
         mockDataService.performGetFruitCompletion()
         
@@ -117,7 +117,7 @@ class BlueScreenViewModel_Tests: XCTestCase {
         
         let mockDataService = MockDataService(fruitList: .none, error: NetworkingError.dataNotFound)
               let dataSource = BlueScreenViewModel(dataService: mockDataService)
-              let mockBlueVC = MockBlueVC(blueVM: dataSource)
+              let mockBlueVC = MockBlueViewController(blueVM: dataSource)
               dataSource.delegate = mockBlueVC
               mockDataService.performGetFruitCompletion()
         
@@ -136,34 +136,5 @@ extension Fruit {
     }
 }
 
-
-class MockBlueVC: BlueViewControllerProtocol {
-
-    var blueVM: BlueScreenViewModelProtocol
-    var didGetDataWasCalled = false
-    var didGetErrorWasCalled = false
-    var errorMessage = ""
-    
-    required init(blueVM: BlueScreenViewModelProtocol) {
-        self.blueVM = blueVM
-        
-    }
-    
-    func didGetData() {
-        self.didGetDataWasCalled = true
-    }
-    
-    func didGetError(message: String) {
-        self.didGetErrorWasCalled = true
-        self.errorMessage = message
-     }
-    
-    
-}
-
-
-protocol BlueViewControllerProtocol: BlueScreenViewModelDelegate {
-    init(blueVM: BlueScreenViewModelProtocol)
-}
 
 
