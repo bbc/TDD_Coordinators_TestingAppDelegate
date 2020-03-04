@@ -124,53 +124,6 @@ class DataService_Tests: XCTestCase {
     }
 }
 
-
-protocol NetworkProtocol {
-    func get(url: URL, completion: @escaping (_ data: Data?, _ error: NetworkingError?) -> Void)
-}
-
-class MockNetworking: NetworkProtocol {
-    
-    var testURLs = [URL?: (Data?, Error?)]()
-    
-    func get(url: URL, completion: @escaping (Data?, NetworkingError?) -> Void) {
-        completion(testURLs[url]?.0, testURLs[url]?.1 as? NetworkingError)
-    }
-}
-
-
-class DataService {
-    
-    var networking: NetworkProtocol
-    var fruitUrl: URL
-    
-    init(networking: NetworkProtocol, fruitUrl: URL) {
-        self.networking = networking
-        self.fruitUrl = fruitUrl
-    }
-    
-    func fetchFruits(completion: @escaping (_ fruits: [Fruit]?, _ error: NetworkingError?) -> Void) {
-        networking.get(url: fruitUrl) { (data, networkingError) in
-            if let error = networkingError {
-                completion(nil, error)
-            } else {
-                if let data = data {
-                    do {
-                        let decoder = JSONDecoder()
-                        let fruitList = try decoder.decode([Fruit].self, from: data)
-                        completion(fruitList, nil)
-                    } catch {
-                        print(error)
-                        completion(nil, NetworkingError.dataDecodingError)
-                    }
-                }
-            }
-        }
-    }
-    
-    
-}
-
 func getTestFruitJson(fruitList: [Fruit]?) -> Data? {
     do {
         let encoder = JSONEncoder()
