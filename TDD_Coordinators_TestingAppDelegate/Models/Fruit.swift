@@ -8,10 +8,12 @@
 
 import Foundation
 
-struct Fruit {
+struct Fruit : Codable{
     let type: String
+    var price: Int
+    var weight: Int
     
-    init(type: String) {
-        self.type = type
-    }
+//    init(type: String) {
+//        self.type = type
+//    }
 }

@@ -19,6 +19,7 @@
 		2CE4B884240FC8BD00BFF98A /* BlueViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B882240FC8BD00BFF98A /* BlueViewControllerProtocol.swift */; };
 		2CE4B885240FC8BD00BFF98A /* BlueViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B882240FC8BD00BFF98A /* BlueViewControllerProtocol.swift */; };
 		2CE4B886240FC8BD00BFF98A /* BlueViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B882240FC8BD00BFF98A /* BlueViewControllerProtocol.swift */; };
+		2CE4B888240FCA5600BFF98A /* DataService_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B887240FCA5600BFF98A /* DataService_Tests.swift */; };
 		981574CE240D594300505525 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981574CD240D594300505525 /* NetworkingError.swift */; };
 		981574CF240D595600505525 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981574CD240D594300505525 /* NetworkingError.swift */; };
 		981574D0240D595700505525 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981574CD240D594300505525 /* NetworkingError.swift */; };
@@ -154,6 +155,7 @@
 		2CE4B878240FBFD700BFF98A /* BlueScreenViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueScreenViewModelProtocol.swift; sourceTree = "<group>"; };
 		2CE4B87D240FC88600BFF98A /* MockBlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBlueViewController.swift; sourceTree = "<group>"; };
 		2CE4B882240FC8BD00BFF98A /* BlueViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewControllerProtocol.swift; sourceTree = "<group>"; };
+		2CE4B887240FCA5600BFF98A /* DataService_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService_Tests.swift; sourceTree = "<group>"; };
 		981574CD240D594300505525 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		983EEF98240560BC009C74AC /* TDD_Coordinators_TestingAppDelegate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDD_Coordinators_TestingAppDelegate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		983EEF9B240560BC009C74AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 				983EEFF42405626D009C74AC /* VMFactory_Tests.swift */,
 				983EEFF32405626D009C74AC /* YellowScreenViewModel_Tests.swift */,
 				989D2246240828B800C378D0 /* BlueScreenViewModel_Tests.swift */,
+				2CE4B887240FCA5600BFF98A /* DataService_Tests.swift */,
 				983EEFB4240560BF009C74AC /* Info.plist */,
 			);
 			path = TDD_Coordinators_TestingAppDelegateTests;
@@ -614,6 +617,7 @@
 				983EEFF72405626E009C74AC /* YellowScreenViewModel_Tests.swift in Sources */,
 				983EF02E24056380009C74AC /* VMFactoryProtocol.swift in Sources */,
 				983EF01C2405635B009C74AC /* BlueViewController.swift in Sources */,
+				2CE4B888240FCA5600BFF98A /* DataService_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

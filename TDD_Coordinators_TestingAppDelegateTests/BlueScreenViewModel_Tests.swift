@@ -127,12 +127,11 @@ class BlueScreenViewModel_Tests: XCTestCase {
     }
     
     
-    
 }
 
 extension Fruit {
     static func fixture(name: String = "Strawberry") -> Fruit {
-        return Fruit(type: name)
+        return Fruit(type: name, price: 0, weight: 0)
     }
 }
 
