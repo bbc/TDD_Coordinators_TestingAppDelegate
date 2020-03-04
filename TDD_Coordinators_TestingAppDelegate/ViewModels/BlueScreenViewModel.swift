@@ -8,18 +8,26 @@
 
 import Foundation
 
-class BlueScreenViewModel {
+class BlueScreenViewModel: BlueScreenViewModelProtocol {
     var numberOfSections = 1
-    var fruitList: [Fruit]? = nil
+    var fruitList: [Fruit]?
     var dataService: DataServiceProtocol?
+    var error: Error?
     weak var delegate: BlueScreenViewModelDelegate?
     
-    init(dataService: DataServiceProtocol?) {
+    required init(dataService: DataServiceProtocol?) {
         self.dataService = dataService
         // should we have a capture list here?
         dataService?.getFruit(completion: { (fruitList, error) in
-            self.fruitList = fruitList
-            self.delegate?.didGetData()
+            if let error = error {
+                self.error = error
+                self.delegate?.didGetError(message: "An error has occurred")
+            } else {
+                if let fruitList = fruitList {
+                     self.fruitList = fruitList
+                    self.delegate?.didGetData()
+                }
+            }
         })
     }
     
@@ -39,4 +47,5 @@ class BlueScreenViewModel {
 
 protocol BlueScreenViewModelDelegate: class {
     func didGetData()
+    func didGetError(message: String)
 }

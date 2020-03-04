@@ -26,7 +26,7 @@ class MockDataService: DataServiceProtocol {
     }
     
     func performGetFruitCompletion(){
-        self.completionHandler!(fruitList, nil)
+        self.completionHandler!(fruitList, error)
     }
     
     

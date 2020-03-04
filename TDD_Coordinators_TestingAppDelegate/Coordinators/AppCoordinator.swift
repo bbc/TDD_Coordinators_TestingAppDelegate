@@ -34,7 +34,6 @@ public class AppCoordinator: AppCoordinatorProtocol {
         self.window = window
         self.showYellowScreen()
         window.makeKeyAndVisible()
-
     }
     
     public func showYellowScreen() {
