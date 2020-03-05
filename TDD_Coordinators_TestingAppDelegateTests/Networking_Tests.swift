@@ -8,31 +8,13 @@
 
 import XCTest
 
-class NetworkService_Tests: XCTestCase {
-    
-    class NetworkService: NetworkProtocol {
-        func get(url: URL, completion: @escaping (Data?, NetworkingError?) -> Void) {
-            let dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
-                if response == nil {
-                    completion(nil, NetworkingError.noInternetConnection)
-                }
-                if let data = data {
-                    completion(data, nil)
-                }
-                if error != nil {
-                    completion(nil, NetworkingError.dataNotFound)
-                }
-            }
-            dataTask.resume()
-            
-        }
-    }
+class Networking_Tests: XCTestCase {
     
     func testWhenGetRequestIsMadeToAURLDataIsReturned(){
         // Given
        let expectation = XCTestExpectation(description: "Download fruit Data")
 
-        let networkService = NetworkService()
+        let networkService = Networking()
         let url = URL(string: "https://raw.githubusercontent.com/fmtvp/recruit-test-data/master/data.json")
         // When
         networkService.get(url: url!) { data, error  in
@@ -50,7 +32,7 @@ class NetworkService_Tests: XCTestCase {
         
        let expectation = XCTestExpectation(description: "Download fruit Data")
 
-        let networkService = NetworkService()
+        let networkService = Networking()
         let url = URL(string: "htps://raw.githubusercontent.com/fmtvp/recruit-test-data/master")
         
         networkService.get(url: url!) { data, error  in

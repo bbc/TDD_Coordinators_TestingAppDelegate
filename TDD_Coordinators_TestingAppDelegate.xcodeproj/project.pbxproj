@@ -141,7 +141,7 @@
 		98B9A0F3240FF42500A3C003 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B9A0F1240FF42500A3C003 /* DataService.swift */; };
 		98B9A0F4240FF42500A3C003 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B9A0F1240FF42500A3C003 /* DataService.swift */; };
 		98B9A0F5240FF42500A3C003 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B9A0F1240FF42500A3C003 /* DataService.swift */; };
-		98B9A0F7240FF57A00A3C003 /* NetworkService_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B9A0F6240FF57A00A3C003 /* NetworkService_Tests.swift */; };
+		98B9A0F7240FF57A00A3C003 /* Networking_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B9A0F6240FF57A00A3C003 /* Networking_Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -220,7 +220,7 @@
 		98B9A0E7240FF2C000A3C003 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
 		98B9A0EC240FF2ED00A3C003 /* MockNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworking.swift; sourceTree = "<group>"; };
 		98B9A0F1240FF42500A3C003 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
-		98B9A0F6240FF57A00A3C003 /* NetworkService_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService_Tests.swift; sourceTree = "<group>"; };
+		98B9A0F6240FF57A00A3C003 /* Networking_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking_Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,7 +319,7 @@
 				983EEFF32405626D009C74AC /* YellowScreenViewModel_Tests.swift */,
 				989D2246240828B800C378D0 /* BlueScreenViewModel_Tests.swift */,
 				2CE4B887240FCA5600BFF98A /* DataService_Tests.swift */,
-				98B9A0F6240FF57A00A3C003 /* NetworkService_Tests.swift */,
+				98B9A0F6240FF57A00A3C003 /* Networking_Tests.swift */,
 				983EEFB4240560BF009C74AC /* Info.plist */,
 			);
 			path = TDD_Coordinators_TestingAppDelegateTests;
@@ -629,7 +629,7 @@
 				2CE4B87A240FBFFA00BFF98A /* BlueScreenViewModelProtocol.swift in Sources */,
 				983EF01924056355009C74AC /* MockVCFactory.swift in Sources */,
 				98B9A0EE240FF2ED00A3C003 /* MockNetworking.swift in Sources */,
-				98B9A0F7240FF57A00A3C003 /* NetworkService_Tests.swift in Sources */,
+				98B9A0F7240FF57A00A3C003 /* Networking_Tests.swift in Sources */,
 				989D22392408255700C378D0 /* Fruit.swift in Sources */,
 				983EF037240563AB009C74AC /* AppLauncher.swift in Sources */,
 				983EF01024056337009C74AC /* AppCoordinatorProtocol.swift in Sources */,
