@@ -13,7 +13,8 @@ class AppCoordinatorTests: XCTestCase {
     func testGivenYouAreOnYellowVCWhenButtonIsPressedThenBlueVCIsNAvigatedToUsingAWindow() {
         
         let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first!
-        let appCoordinator = AppCoordinator(vcFactory: MockVCFactory(), vmFactory: MockVMFactory(), window: window)
+        let mockDataService = MockDataService(fruitList: nil, error: nil)
+        let appCoordinator = AppCoordinator(vcFactory: MockVCFactory(), vmFactory: MockVMFactory(dataService: mockDataService), window: window)
         
         appCoordinator.showBlueScreen()
         
@@ -24,7 +25,9 @@ class AppCoordinatorTests: XCTestCase {
     
     func testThatTheDefaultScreenIsYellow(){
         let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first!
-        let appCoordinator = AppCoordinator(vcFactory: MockVCFactory(), vmFactory: MockVMFactory(), window: window)
+        let mockDataService = MockDataService(fruitList: nil, error: nil)
+
+        let appCoordinator = AppCoordinator(vcFactory: MockVCFactory(), vmFactory: MockVMFactory(dataService: mockDataService), window: window)
         
         appCoordinator.showYellowScreen()
         

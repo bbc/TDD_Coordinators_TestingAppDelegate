@@ -17,6 +17,9 @@ class AppLauncher {
     }
     
     func launchApp(){
-        _ = AppCoordinator(vcFactory: VCFactory(), vmFactory: VMFactory(), window: self.window)
+        guard let fruitUrl = URL(string: "https://raw.githubusercontent.com/fmtvp/recruit-test-data/master/data.json") else {return}
+        let networking = Networking()
+        let dataService = DataService(networking: networking, fruitUrl: fruitUrl)
+        _ = AppCoordinator(vcFactory: VCFactory(), vmFactory: VMFactory(dataService: dataService), window: self.window)
     }
 }

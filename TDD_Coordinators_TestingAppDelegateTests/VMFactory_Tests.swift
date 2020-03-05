@@ -13,7 +13,8 @@ class VMFactory_Tests: XCTestCase {
 
     func testGivenAnAppCoordinatorWhenVMFactoryIsCalledItReturnsAVM(){
         //arrange
-        let viewModelFactory = VMFactory()
+        let mockDataService = MockDataService(fruitList: nil, error: nil)
+        let viewModelFactory = VMFactory(dataService: mockDataService)
         viewModelFactory.appCoordinator = MockAppCoordinator(vcFactory: MockVCFactory(), vmFactory: viewModelFactory, window: UIWindow())
         //act
         let yellowViewModel = viewModelFactory.makeYellowScreenViewModel()
@@ -24,7 +25,8 @@ class VMFactory_Tests: XCTestCase {
     
     func testWhenAnAppCoordinatorRequestsItReturnsABlueVM(){
         //given
-        let viewModelFactory = VMFactory()
+        let mockDataService = MockDataService(fruitList: nil, error: nil)
+        let viewModelFactory = VMFactory(dataService: mockDataService)
         viewModelFactory.appCoordinator = MockAppCoordinator(vcFactory: MockVCFactory(), vmFactory: viewModelFactory, window: UIWindow())
         //act
         let blueViewModel = viewModelFactory.makeBlueScreenViewModel()

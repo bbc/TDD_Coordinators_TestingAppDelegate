@@ -10,7 +10,12 @@ import Foundation
 
 class VMFactory: VMFactoryProtocol {
     
+    var dataService: DataServiceProtocol
     var appCoordinator: AppCoordinatorProtocol?
+    
+    required init(dataService: DataServiceProtocol) {
+        self.dataService = dataService
+    }
         
     func makeYellowScreenViewModel() -> YellowScreenViewModelProtocol {
         let yellowScreenVM = YellowScreenViewModel()
@@ -19,8 +24,7 @@ class VMFactory: VMFactoryProtocol {
     }
     
     func makeBlueScreenViewModel() -> BlueScreenViewModelProtocol {
-        guard let url = URL(string: "https://raw.githubusercontent.com/fmtvp/recruit-test-data/master/data.json") else {fatalError()}
-        let blueScreenVm = BlueScreenViewModel(dataService: DataService(networking: Networking(), fruitUrl: url))
+        let blueScreenVm = BlueScreenViewModel(dataService: dataService)
         return blueScreenVm
     }
     

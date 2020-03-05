@@ -10,7 +10,12 @@ import Foundation
 
 class MockVMFactory: VMFactoryProtocol {
 
+    var dataService: DataServiceProtocol
     var appCoordinator: AppCoordinatorProtocol?
+    
+    required init(dataService: DataServiceProtocol) {
+        self.dataService = dataService
+    }
        
     func makeYellowScreenViewModel() -> YellowScreenViewModelProtocol {
         let yellowScreenVM = YellowScreenViewModel()
@@ -19,8 +24,7 @@ class MockVMFactory: VMFactoryProtocol {
     }
     
     func makeBlueScreenViewModel() -> BlueScreenViewModelProtocol {
-        guard let url = URL(string: "") else {fatalError()}
-        let blueScreenVm = BlueScreenViewModel(dataService: DataService(networking: Networking(), fruitUrl: url))
+        let blueScreenVm = BlueScreenViewModel(dataService: self.dataService)
         return blueScreenVm
     }
 }
