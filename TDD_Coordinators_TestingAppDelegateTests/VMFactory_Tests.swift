@@ -30,6 +30,7 @@ class VMFactory_Tests: XCTestCase {
         let blueViewModel = viewModelFactory.makeBlueScreenViewModel()
         //assert
         XCTAssertNotNil(blueViewModel)
+    
         
     }
 
