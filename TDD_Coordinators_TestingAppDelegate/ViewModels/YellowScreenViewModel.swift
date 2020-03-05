@@ -8,13 +8,11 @@
 
 import Foundation
 
-public class YellowScreenViewModel: YellowScreenViewModelProtocol {
+class YellowScreenViewModel: YellowScreenViewModelProtocol {
     
-    public init() {}
+    var appCoordinator: AppCoordinatorProtocol?
     
-    public var appCoordinator: AppCoordinatorProtocol?
-    
-    public func launchBlueScreen() {
+    func launchBlueScreen() {
         if let appCoordinator = appCoordinator{
             appCoordinator.showBlueScreen()
         }

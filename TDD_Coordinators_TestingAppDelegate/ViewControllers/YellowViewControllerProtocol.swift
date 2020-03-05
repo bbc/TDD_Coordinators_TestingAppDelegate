@@ -9,6 +9,6 @@
 import Foundation
 import UIKit
 
-public protocol YellowViewControllerProtocol: UIViewController{
+protocol YellowViewControllerProtocol: UIViewController{
     var yellowVM: YellowScreenViewModelProtocol? {get set}
 }

@@ -8,7 +8,8 @@
 
 import Foundation
 
-public protocol VMFactoryProtocol {
+protocol VMFactoryProtocol {
     var appCoordinator: AppCoordinatorProtocol? {get set}
     func makeYellowScreenViewModel() -> YellowScreenViewModelProtocol
+    func makeBlueScreenViewModel() -> BlueScreenViewModelProtocol
 }

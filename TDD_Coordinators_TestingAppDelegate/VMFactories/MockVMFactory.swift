@@ -8,16 +8,20 @@
 
 import Foundation
 
-public class MockVMFactory: VMFactoryProtocol {
-    
-    public var appCoordinator: AppCoordinatorProtocol?
-   
-    public init() {}
-    
-    public func makeYellowScreenViewModel() -> YellowScreenViewModelProtocol {
+class MockVMFactory: VMFactoryProtocol {
+
+    var appCoordinator: AppCoordinatorProtocol?
+       
+    func makeYellowScreenViewModel() -> YellowScreenViewModelProtocol {
         let yellowScreenVM = YellowScreenViewModel()
         yellowScreenVM.appCoordinator = self.appCoordinator
         return yellowScreenVM
+    }
+    
+    func makeBlueScreenViewModel() -> BlueScreenViewModelProtocol {
+        guard let url = URL(string: "") else {fatalError()}
+        let blueScreenVm = BlueScreenViewModel(dataService: DataService(networking: Networking(), fruitUrl: url))
+        return blueScreenVm
     }
 }
 

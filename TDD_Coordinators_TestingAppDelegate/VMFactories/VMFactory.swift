@@ -8,15 +8,21 @@
 
 import Foundation
 
-public class VMFactory: VMFactoryProtocol {
-    public var appCoordinator: AppCoordinatorProtocol?
+class VMFactory: VMFactoryProtocol {
     
-    public init() {}
-    
-    public func makeYellowScreenViewModel() -> YellowScreenViewModelProtocol {
+    var appCoordinator: AppCoordinatorProtocol?
+        
+    func makeYellowScreenViewModel() -> YellowScreenViewModelProtocol {
         let yellowScreenVM = YellowScreenViewModel()
         yellowScreenVM.appCoordinator = self.appCoordinator
         return yellowScreenVM
     }
+    
+    func makeBlueScreenViewModel() -> BlueScreenViewModelProtocol {
+        guard let url = URL(string: "https://raw.githubusercontent.com/fmtvp/recruit-test-data/master/data.json") else {fatalError()}
+        let blueScreenVm = BlueScreenViewModel(dataService: DataService(networking: Networking(), fruitUrl: url))
+        return blueScreenVm
+    }
+    
     
 }

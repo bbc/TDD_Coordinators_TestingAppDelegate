@@ -21,15 +21,18 @@ class VCFactory_Tests: XCTestCase {
         XCTAssertNotNil(yellowVC?.yellowVM)
     }
     
-    func testGivenAYellowScreenWhenTheButtonIsPressedVCFactoryReturnsABlueVC() {
-        //arrange
-        let vcFactory = VCFactory()
-        //act
-        let blueVC = vcFactory.makeBlueScreen()
-        //assert
-        XCTAssertNotNil(blueVC)
-        
-    }
+//    func testGivenAYellowScreenWhenTheButtonIsPressedVCFactoryReturnsABlueVC() {
+//        //arrange
+//        let vcFactory = VCFactory()
+//        //act
+//        let blueVC = vcFactory.makeBlueScreen()
+//        //assert
+//        XCTAssertNotNil(blueVC)
+////        XCTAssertNotNil(blueVC?.blueVM)
+    //         XCTAssertNotNil(blueViewModel.delegate)
+
+//        
+//    }
     
     
     

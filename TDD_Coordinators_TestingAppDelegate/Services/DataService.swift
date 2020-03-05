@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DataService {
+class DataService: DataServiceProtocol {
     
     var networking: NetworkProtocol
     var fruitUrl: URL

@@ -9,5 +9,5 @@
 import Foundation
 
 protocol BlueViewControllerProtocol: BlueScreenViewModelDelegate {
-    init(blueVM: BlueScreenViewModelProtocol)
+     var blueVM: BlueScreenViewModelProtocol? {get set}
 }

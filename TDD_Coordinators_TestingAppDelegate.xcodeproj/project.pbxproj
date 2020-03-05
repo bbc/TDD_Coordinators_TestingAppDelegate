@@ -20,6 +20,10 @@
 		2CE4B885240FC8BD00BFF98A /* BlueViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B882240FC8BD00BFF98A /* BlueViewControllerProtocol.swift */; };
 		2CE4B886240FC8BD00BFF98A /* BlueViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B882240FC8BD00BFF98A /* BlueViewControllerProtocol.swift */; };
 		2CE4B888240FCA5600BFF98A /* DataService_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B887240FCA5600BFF98A /* DataService_Tests.swift */; };
+		2CE4B88A2410FE8C00BFF98A /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B8892410FE8C00BFF98A /* Networking.swift */; };
+		2CE4B88B241100C800BFF98A /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B8892410FE8C00BFF98A /* Networking.swift */; };
+		2CE4B88C241100C800BFF98A /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B8892410FE8C00BFF98A /* Networking.swift */; };
+		2CE4B88D241100C900BFF98A /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B8892410FE8C00BFF98A /* Networking.swift */; };
 		981574CE240D594300505525 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981574CD240D594300505525 /* NetworkingError.swift */; };
 		981574CF240D595600505525 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981574CD240D594300505525 /* NetworkingError.swift */; };
 		981574D0240D595700505525 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981574CD240D594300505525 /* NetworkingError.swift */; };
@@ -169,6 +173,7 @@
 		2CE4B87D240FC88600BFF98A /* MockBlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBlueViewController.swift; sourceTree = "<group>"; };
 		2CE4B882240FC8BD00BFF98A /* BlueViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewControllerProtocol.swift; sourceTree = "<group>"; };
 		2CE4B887240FCA5600BFF98A /* DataService_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService_Tests.swift; sourceTree = "<group>"; };
+		2CE4B8892410FE8C00BFF98A /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		981574CD240D594300505525 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		983EEF98240560BC009C74AC /* TDD_Coordinators_TestingAppDelegate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDD_Coordinators_TestingAppDelegate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		983EEF9B240560BC009C74AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -256,6 +261,7 @@
 				981574CD240D594300505525 /* NetworkingError.swift */,
 				98B9A0E7240FF2C000A3C003 /* NetworkProtocol.swift */,
 				98B9A0EC240FF2ED00A3C003 /* MockNetworking.swift */,
+				2CE4B8892410FE8C00BFF98A /* Networking.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -604,6 +610,7 @@
 				989D2242240825BD00C378D0 /* BlueScreenViewModel.swift in Sources */,
 				98B9A0ED240FF2ED00A3C003 /* MockNetworking.swift in Sources */,
 				983EEFEB2405621A009C74AC /* VCFactory.swift in Sources */,
+				2CE4B88A2410FE8C00BFF98A /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +621,7 @@
 				983EF04B24056CD0009C74AC /* TestingAppDelegate.swift in Sources */,
 				983EF01624056350009C74AC /* VCFactory.swift in Sources */,
 				983EF04E24056CE0009C74AC /* TestingSceneDelegate.swift in Sources */,
+				2CE4B88B241100C800BFF98A /* Networking.swift in Sources */,
 				989D2247240828B800C378D0 /* BlueScreenViewModel_Tests.swift in Sources */,
 				2CE4B87F240FC89D00BFF98A /* MockBlueViewController.swift in Sources */,
 				981574CF240D595600505525 /* NetworkingError.swift in Sources */,
@@ -683,6 +691,7 @@
 				989D2244240825BD00C378D0 /* BlueScreenViewModel.swift in Sources */,
 				98B9A0EF240FF2ED00A3C003 /* MockNetworking.swift in Sources */,
 				983EF01424056349009C74AC /* VCFactoryProtocol.swift in Sources */,
+				2CE4B88C241100C800BFF98A /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,6 +729,7 @@
 				989D2245240825BD00C378D0 /* BlueScreenViewModel.swift in Sources */,
 				98B9A0F0240FF2ED00A3C003 /* MockNetworking.swift in Sources */,
 				983EF0152405634A009C74AC /* VCFactoryProtocol.swift in Sources */,
+				2CE4B88D241100C900BFF98A /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

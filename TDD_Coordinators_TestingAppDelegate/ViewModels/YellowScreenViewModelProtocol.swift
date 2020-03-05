@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol YellowScreenViewModelProtocol {
+protocol YellowScreenViewModelProtocol {
     var appCoordinator: AppCoordinatorProtocol? {get set}
     func launchBlueScreen()
 }

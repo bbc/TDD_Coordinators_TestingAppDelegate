@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-public protocol VCFactoryProtocol {
+protocol VCFactoryProtocol {
         
     func makeYellowScreen(yellowViewModel: YellowScreenViewModelProtocol) -> UIViewController
     
-    func makeBlueScreen() -> UIViewController
+    func makeBlueScreen(blueViewModel: BlueScreenViewModelProtocol) -> UIViewController
 
 }

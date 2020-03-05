@@ -9,5 +9,5 @@
 import Foundation
 
 protocol DataServiceProtocol {
-    func getFruit(completion: @escaping (_ fruits: [Fruit]?, _ error: NetworkingError?) -> Void)
+    func fetchFruits(completion: @escaping (_ fruits: [Fruit]?, _ error: NetworkingError?) -> Void)
 }

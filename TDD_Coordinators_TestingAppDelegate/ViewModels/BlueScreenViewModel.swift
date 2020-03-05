@@ -18,7 +18,7 @@ class BlueScreenViewModel: BlueScreenViewModelProtocol {
     required init(dataService: DataServiceProtocol?) {
         self.dataService = dataService
         // should we have a capture list here?
-        dataService?.getFruit(completion: { (fruitList, error) in
+        dataService?.fetchFruits(completion: { (fruitList, error) in
             if let error = error {
                 self.error = error
                 self.delegate?.didGetError(message: "An error has occurred")

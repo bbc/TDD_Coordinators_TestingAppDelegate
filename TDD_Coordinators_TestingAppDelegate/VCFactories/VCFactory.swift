@@ -9,19 +9,20 @@
 import Foundation
 import UIKit
 
-public class VCFactory: VCFactoryProtocol {
-    
-    public init() {}
-    
-    public func makeYellowScreen(yellowViewModel: YellowScreenViewModelProtocol) -> UIViewController {
+class VCFactory: VCFactoryProtocol {
+        
+    func makeYellowScreen(yellowViewModel: YellowScreenViewModelProtocol) -> UIViewController {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle:Bundle(for: type(of: self)))
         let yellowViewController = storyboard.instantiateViewController(identifier: "YellowViewController") as! YellowViewController
         yellowViewController.yellowVM = yellowViewModel
         return yellowViewController
     }
     
-    public func makeBlueScreen() -> UIViewController {
-        return BlueViewController()
+    func makeBlueScreen(blueViewModel: BlueScreenViewModelProtocol) -> UIViewController {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle:Bundle(for: type(of: self)))
+        let blueViewController = storyboard.instantiateViewController(identifier: "BlueViewController") as! BlueViewController
+        blueViewController.blueVM = blueViewModel
+        return blueViewController
     }
     
     

@@ -9,16 +9,11 @@
 import Foundation
 
 class MockBlueViewController: BlueViewControllerProtocol {
-
-    var blueVM: BlueScreenViewModelProtocol
+    
+    var blueVM: BlueScreenViewModelProtocol?
     var didGetDataWasCalled = false
     var didGetErrorWasCalled = false
     var errorMessage = ""
-    
-    required init(blueVM: BlueScreenViewModelProtocol) {
-        self.blueVM = blueVM
-        
-    }
     
     func didGetData() {
         self.didGetDataWasCalled = true

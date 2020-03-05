@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-public class MockVCFactory: VCFactoryProtocol {
+class MockVCFactory: VCFactoryProtocol {
     
-    public init() {}
+    init() {}
         
-    public var yellowVM: YellowScreenViewModelProtocol?
+    var yellowVM: YellowScreenViewModelProtocol?
     
-    public func makeYellowScreen(yellowViewModel: YellowScreenViewModelProtocol) -> UIViewController {
+    func makeYellowScreen(yellowViewModel: YellowScreenViewModelProtocol) -> UIViewController {
         yellowVM = yellowViewModel
         //if we are using the storyboard here is this really a mock at all?
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle:Bundle(for: type(of: self)))
@@ -24,9 +24,14 @@ public class MockVCFactory: VCFactoryProtocol {
         return yellowViewController
     }
     
-    public func makeBlueScreen() -> UIViewController {
+//    public func makeBlueScreen() -> UIViewController {
+//        return BlueViewController()
+//    }
+//
+    func makeBlueScreen(blueViewModel: BlueScreenViewModelProtocol) -> UIViewController {
         return BlueViewController()
     }
+    
     
     
     

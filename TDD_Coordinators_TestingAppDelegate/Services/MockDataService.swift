@@ -21,7 +21,7 @@ class MockDataService: DataServiceProtocol {
         self.error = error
     }
     
-    func getFruit(completion: @escaping ([Fruit]?, NetworkingError?) -> Void) {
+    func fetchFruits(completion: @escaping ([Fruit]?, NetworkingError?) -> Void) {
         self.completionHandler = completion
     }
     

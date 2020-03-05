@@ -9,37 +9,37 @@
 import Foundation
 import UIKit
 
-public class MockAppCoordinator: AppCoordinatorProtocol {
+class MockAppCoordinator: AppCoordinatorProtocol {
     
     var vmFactory: VMFactoryProtocol
     var vcFactory: VCFactoryProtocol
     
-    public var blueScreenExists = false
-    public var blueViewModelExists = false
+    var blueScreenExists = false
+    var blueViewModelExists = false
     
-    public var yellowVC: YellowViewControllerProtocol?
-    public var yellowScreenVM: YellowScreenViewModelProtocol?
+    var yellowVC: YellowViewControllerProtocol?
+    var yellowScreenVM: YellowScreenViewModelProtocol?
     
-    public var blueVC: UIViewController?
+    var blueVC: UIViewController?
     
-    required public init(vcFactory: VCFactoryProtocol, vmFactory: VMFactoryProtocol, window: UIWindow) {
+    required init(vcFactory: VCFactoryProtocol, vmFactory: VMFactoryProtocol, window: UIWindow) {
         self.vcFactory = vcFactory
         self.vmFactory = vmFactory
         showYellowScreen()
     }
     
-    
-    public func showBlueScreen() {
-        blueScreenExists = true
-        blueViewModelExists = true
-        blueVC = vcFactory.makeBlueScreen()
-    }
-    public func showYellowScreen() {
+    func showYellowScreen() {
         self.vmFactory.appCoordinator = self
         yellowScreenVM = vmFactory.makeYellowScreenViewModel()
         if let vmScreen = yellowScreenVM {
             yellowVC = vcFactory.makeYellowScreen(yellowViewModel: vmScreen) as? YellowViewControllerProtocol
         }
+    }
+    
+    func showBlueScreen() {
+        blueScreenExists = true
+        blueViewModelExists = true
+//        blueVC = vcFactory.makeBlueScreen()
     }
     
 }

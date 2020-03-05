@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public protocol AppCoordinatorProtocol {
+protocol AppCoordinatorProtocol {
     
     init(vcFactory: VCFactoryProtocol, vmFactory: VMFactoryProtocol, window: UIWindow)
     

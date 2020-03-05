@@ -8,7 +8,9 @@
 
 import UIKit
 
-class BlueViewController: UIViewController {
+class BlueViewController: UIViewController, BlueViewControllerProtocol {
+    
+    var blueVM: BlueScreenViewModelProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +18,15 @@ class BlueViewController: UIViewController {
         view.accessibilityIdentifier = "blueVC"
         
         view.tag = 2
+    }
+    
+    
+    func didGetData() {
+        
+    }
+    
+    func didGetError(message: String) {
+        
     }
     
     

@@ -105,7 +105,8 @@ class BlueScreenViewModel_Tests: XCTestCase {
     func testWhenFruitListIsReturnedDidGetDataIsCalledAndDidGetErrorIsNot() {
         let mockDataService = MockDataService(fruitList: [.fixture(name: "Strawberry"), .fixture(name: "Banana")], error: nil)
         let dataSource = BlueScreenViewModel(dataService: mockDataService)
-        let mockBlueVC = MockBlueViewController(blueVM: dataSource)
+        let mockBlueVC = MockBlueViewController()
+        mockBlueVC.blueVM = dataSource
         dataSource.delegate = mockBlueVC
         mockDataService.performGetFruitCompletion()
         
@@ -117,7 +118,8 @@ class BlueScreenViewModel_Tests: XCTestCase {
         
         let mockDataService = MockDataService(fruitList: .none, error: NetworkingError.dataNotFound)
               let dataSource = BlueScreenViewModel(dataService: mockDataService)
-              let mockBlueVC = MockBlueViewController(blueVM: dataSource)
+              let mockBlueVC = MockBlueViewController()
+              mockBlueVC.blueVM = dataSource
               dataSource.delegate = mockBlueVC
               mockDataService.performGetFruitCompletion()
         
