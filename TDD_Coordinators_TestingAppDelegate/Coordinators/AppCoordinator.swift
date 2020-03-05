@@ -17,21 +17,20 @@ import UIKit
 //}
 
 public class AppCoordinator: AppCoordinatorProtocol {
-    
+
     var window: UIWindow
     var vcFactory: VCFactoryProtocol
     var vmFactory: VMFactoryProtocol
     
     var yellowVC: UIViewController?
     var yellowScreenVM: YellowScreenViewModelProtocol?
-    var blueScreenVM: BlueScreenViewModelProtocol?
     
     var blueVC: UIViewController?
+    var blueScreenVM: BlueScreenViewModelProtocol?
     
     required init(vcFactory: VCFactoryProtocol, vmFactory: VMFactoryProtocol, window: UIWindow) {
         self.vcFactory = vcFactory
         self.vmFactory = vmFactory
-        
         self.window = window
         self.showYellowScreen()
         window.makeKeyAndVisible()
@@ -48,8 +47,10 @@ public class AppCoordinator: AppCoordinatorProtocol {
     
     func showBlueScreen() {
         self.vmFactory.appCoordinator = self
-//        blueScreenVM = BlueScreenViewModel(dataService: DataService(networking: nil, fruitUrl: ""))
-//        blueVC = vcFactory.makeBlueScreen(blueViewModel: blueScreenVM)
-        window.rootViewController = blueVC
+        blueScreenVM = vmFactory.makeBlueScreenViewModel()
+        if let  vmScreen = blueScreenVM {
+            blueVC = vcFactory.makeBlueScreen(blueViewModel: vmScreen)
+            window.rootViewController = blueVC
+        }
     }
 }

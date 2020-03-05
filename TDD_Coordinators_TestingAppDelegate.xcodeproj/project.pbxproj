@@ -391,10 +391,10 @@
 		983EF001240562E5009C74AC /* TestingAppDelegateTests */ = {
 			isa = PBXGroup;
 			children = (
+				983EF04124056912009C74AC /* TestingAppDelegate.swift */,
 				983EF0432405695A009C74AC /* TestingSceneDelegate.swift */,
 				983EF002240562E5009C74AC /* AppCoordinatorTests.swift */,
 				983EF004240562E5009C74AC /* Info.plist */,
-				983EF04124056912009C74AC /* TestingAppDelegate.swift */,
 			);
 			path = TestingAppDelegateTests;
 			sourceTree = "<group>";

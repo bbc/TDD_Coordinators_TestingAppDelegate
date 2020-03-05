@@ -22,9 +22,10 @@ class MockAppCoordinator: AppCoordinatorProtocol {
     
     var blueVC: UIViewController?
     
-    required init(vcFactory: VCFactoryProtocol, vmFactory: VMFactoryProtocol, window: UIWindow) {
+    required init(vcFactory: VCFactoryProtocol, vmFactory: VMFactoryProtocol, window: UIWindow){
         self.vcFactory = vcFactory
         self.vmFactory = vmFactory
+
         showYellowScreen()
     }
     
