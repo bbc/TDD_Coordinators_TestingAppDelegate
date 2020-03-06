@@ -15,26 +15,25 @@ class MockVCFactory: VCFactoryProtocol {
     
     func makeYellowScreen(yellowViewModel: YellowScreenViewModelProtocol) -> UIViewController {
         self.yellowVM = yellowViewModel
-        return ViewControllerWithTag()
+        let vc = ViewControllerWithTag()
+        vc.tag = ViewTag.yellowVc.rawValue
+        return vc
     }
     
     func makeBlueScreen(blueViewModel: BlueScreenViewModelProtocol) -> UIViewController {
-        return ViewControllerWithOtherTag()
+        let vc = ViewControllerWithTag()
+        vc.tag = ViewTag.blueVc.rawValue
+        return vc
     }
 }
 
-class ViewControllerWithTag : UIViewController
-{
+class ViewControllerWithTag : UIViewController {
+    var tag: Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.tag = 11
+        view.tag = self.tag
     }
 }
 
-class ViewControllerWithOtherTag : UIViewController
-{
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.tag = 12
-    }
-}
+

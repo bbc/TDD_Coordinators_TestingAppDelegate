@@ -17,7 +17,7 @@ class MockVMFactory: VMFactoryProtocol {
     }
     
     func makeBlueScreenViewModel() -> BlueScreenViewModelProtocol {
-        return MockBlueScreenViewModel()
+        return MockBlueScreenViewModel(fruit: [])
     }
 }
 
@@ -30,11 +30,20 @@ class MockYellowScreenViewModel: YellowScreenViewModelProtocol {
 }
 
 class MockBlueScreenViewModel: BlueScreenViewModelProtocol {
+    
     var delegate: BlueScreenViewModelDelegate?
+    let fruit: [Fruit]
     
-    var appCoordinator: AppCoordinatorProtocol?
+    init(fruit: [Fruit]) {
+        self.fruit = fruit
+    }
     
-    func launchBlueScreen() {
+    func numberOfRows(inSection section: Int) -> Int {
+        return fruit.count
+    }
+    
+    func string(forRow row: Int, inSection section: Int) -> String? {
+        return fruit[row].type
     }
     
 }

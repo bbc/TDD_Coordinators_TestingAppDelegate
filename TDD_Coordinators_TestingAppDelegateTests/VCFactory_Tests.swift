@@ -25,7 +25,7 @@ class VCFactory_Tests: XCTestCase {
         //arrange
         let vcFactory = VCFactory()
         //act
-        let blueVC = vcFactory.makeBlueScreen(blueViewModel: MockBlueScreenViewModel()) as? BlueViewController
+        let blueVC = vcFactory.makeBlueScreen(blueViewModel: MockBlueScreenViewModel(fruit: [])) as? BlueViewController
         //assert
         XCTAssertNotNil(blueVC)
         XCTAssertNotNil(blueVC?.blueVM)

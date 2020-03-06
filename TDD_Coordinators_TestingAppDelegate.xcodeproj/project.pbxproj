@@ -26,6 +26,11 @@
 		2CE4B88D241100C900BFF98A /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B8892410FE8C00BFF98A /* Networking.swift */; };
 		2CE4B88F24111BAA00BFF98A /* BlueScreenVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B88E24111BAA00BFF98A /* BlueScreenVCTests.swift */; };
 		2CE4B891241159BA00BFF98A /* VCShite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B890241159BA00BFF98A /* VCShite.swift */; };
+		2CE4B8932412554600BFF98A /* ViewTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B8922412554600BFF98A /* ViewTag.swift */; };
+		2CE4B8942412554E00BFF98A /* ViewTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B8922412554600BFF98A /* ViewTag.swift */; };
+		2CE4B8952412554E00BFF98A /* ViewTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B8922412554600BFF98A /* ViewTag.swift */; };
+		2CE4B8962412554F00BFF98A /* ViewTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B8922412554600BFF98A /* ViewTag.swift */; };
+		2CE4B89824125E1600BFF98A /* YellowScreenVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B89724125E1600BFF98A /* YellowScreenVCTests.swift */; };
 		981574CE240D594300505525 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981574CD240D594300505525 /* NetworkingError.swift */; };
 		981574CF240D595600505525 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981574CD240D594300505525 /* NetworkingError.swift */; };
 		981574D0240D595700505525 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981574CD240D594300505525 /* NetworkingError.swift */; };
@@ -178,6 +183,8 @@
 		2CE4B8892410FE8C00BFF98A /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		2CE4B88E24111BAA00BFF98A /* BlueScreenVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueScreenVCTests.swift; sourceTree = "<group>"; };
 		2CE4B890241159BA00BFF98A /* VCShite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCShite.swift; sourceTree = "<group>"; };
+		2CE4B8922412554600BFF98A /* ViewTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTag.swift; sourceTree = "<group>"; };
+		2CE4B89724125E1600BFF98A /* YellowScreenVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowScreenVCTests.swift; sourceTree = "<group>"; };
 		981574CD240D594300505525 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		983EEF98240560BC009C74AC /* TDD_Coordinators_TestingAppDelegate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDD_Coordinators_TestingAppDelegate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		983EEF9B240560BC009C74AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -398,9 +405,10 @@
 				983EF04124056912009C74AC /* TestingAppDelegate.swift */,
 				983EF0432405695A009C74AC /* TestingSceneDelegate.swift */,
 				983EF002240562E5009C74AC /* AppCoordinatorTests.swift */,
+				2CE4B89724125E1600BFF98A /* YellowScreenVCTests.swift */,
 				2CE4B88E24111BAA00BFF98A /* BlueScreenVCTests.swift */,
-				983EF004240562E5009C74AC /* Info.plist */,
 				2CE4B890241159BA00BFF98A /* VCShite.swift */,
+				983EF004240562E5009C74AC /* Info.plist */,
 			);
 			path = TestingAppDelegateTests;
 			sourceTree = "<group>";
@@ -419,6 +427,7 @@
 			isa = PBXGroup;
 			children = (
 				989D22372408254D00C378D0 /* Fruit.swift */,
+				2CE4B8922412554600BFF98A /* ViewTag.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -617,6 +626,7 @@
 				98B9A0ED240FF2ED00A3C003 /* MockNetworking.swift in Sources */,
 				983EEFEB2405621A009C74AC /* VCFactory.swift in Sources */,
 				2CE4B88A2410FE8C00BFF98A /* Networking.swift in Sources */,
+				2CE4B8932412554600BFF98A /* ViewTag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,6 +648,7 @@
 				98B9A0F7240FF57A00A3C003 /* Networking_Tests.swift in Sources */,
 				989D22392408255700C378D0 /* Fruit.swift in Sources */,
 				983EF037240563AB009C74AC /* AppLauncher.swift in Sources */,
+				2CE4B8942412554E00BFF98A /* ViewTag.swift in Sources */,
 				983EF01024056337009C74AC /* AppCoordinatorProtocol.swift in Sources */,
 				98B9A0E9240FF2D200A3C003 /* NetworkProtocol.swift in Sources */,
 				2CE4B884240FC8BD00BFF98A /* BlueViewControllerProtocol.swift in Sources */,
@@ -698,6 +709,7 @@
 				98B9A0EF240FF2ED00A3C003 /* MockNetworking.swift in Sources */,
 				983EF01424056349009C74AC /* VCFactoryProtocol.swift in Sources */,
 				2CE4B88C241100C800BFF98A /* Networking.swift in Sources */,
+				2CE4B8952412554E00BFF98A /* ViewTag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,6 +732,8 @@
 				983EF01E2405635C009C74AC /* BlueViewController.swift in Sources */,
 				983EF0362405638A009C74AC /* VMFactory.swift in Sources */,
 				983EF02724056369009C74AC /* MockYellowViewController.swift in Sources */,
+				2CE4B8962412554F00BFF98A /* ViewTag.swift in Sources */,
+				2CE4B89824125E1600BFF98A /* YellowScreenVCTests.swift in Sources */,
 				2CE4B87C240FBFFC00BFF98A /* BlueScreenViewModelProtocol.swift in Sources */,
 				981574D1240D595800505525 /* NetworkingError.swift in Sources */,
 				983EF02D2405637B009C74AC /* YellowScreenViewModelProtocol.swift in Sources */,

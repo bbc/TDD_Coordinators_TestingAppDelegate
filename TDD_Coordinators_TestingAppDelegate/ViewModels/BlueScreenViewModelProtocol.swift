@@ -10,4 +10,7 @@ import Foundation
 
 protocol BlueScreenViewModelProtocol {
     var delegate: BlueScreenViewModelDelegate? { get set }
+    
+    func numberOfRows(inSection section: Int) -> Int
+    func string(forRow row: Int, inSection section: Int) -> String?
 }
