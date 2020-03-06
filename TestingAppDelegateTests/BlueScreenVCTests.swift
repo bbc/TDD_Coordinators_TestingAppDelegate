@@ -42,35 +42,39 @@ class BlueScreenVCTests: XCTestCase {
         XCTAssertEqual(tableViewCellNumber, 3)
         XCTAssertEqual(firstCellLable, "apple")
         XCTAssertEqual(secondCellLable, "banana")
-
+    }
+    
+    func testBlueVCShowsErrorWhenNoDataReturned() {
+        let asyncExpectation = self.expectation(description: "Async block executed")
+        
+        let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first!
+        let mvm = MockBlueScreenViewModel(fruit: [])
+        let vc = VCFactory().makeBlueScreen(blueViewModel: mvm) as! BlueViewController
+        
+        window.rootViewController = vc
+        vc.didGetError(message: "An error as occurred")
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+            let alert = window.rootViewController?.presentedViewController as! UIAlertController
+            let actionsCount = alert.actions.count
+            let message = alert.message
+            let title = alert.title
+            let okAction = alert.actions[0].title
+            
+            XCTAssertNotNil(alert)
+            XCTAssertEqual(actionsCount, 1)
+            XCTAssertEqual(okAction, "OK")
+            XCTAssertEqual(title, "Error")
+            XCTAssertEqual(message, "An error as occurred")
+            
+            
+            asyncExpectation.fulfill()
+        })
+        waitForExpectations(timeout: 1.5, handler: nil)
+        
     }
     
     
     
-//
-//    func testWhenBlueScreenIsDisplayedItIsADelegateOfTheVM() {
-//        let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first!
-//        
-//        // need to create a VM and a VC
-//        let blueVM =
-//        
-//        self.vmFactory.appCoordinator = self
-//        blueScreenVM = vmFactory.makeBlueScreenViewModel()
-//        if let  vmScreen = blueScreenVM {
-//            blueVC = vcFactory.makeBlueScreen(blueViewModel: vmScreen)
-//            window.rootViewController = blueVC
-//        }
-//        
-//        
-//        
-//        
-//        let mockDataService = MockDataService(fruitList: nil, error: nil)
-//        let appCoordinator = AppCoordinator(vcFactory: MockVCFactory(), vmFactory: MockVMFactory(dataService: mockDataService), window: window)
-//        
-//        appCoordinator.showBlueScreen()
-//        
-//        XCTAssertNotNil(appCoordinator.blueVC)
-//        XCTAssertNotNil(window.viewWithTag(2))
-//    }
-//
+
 }

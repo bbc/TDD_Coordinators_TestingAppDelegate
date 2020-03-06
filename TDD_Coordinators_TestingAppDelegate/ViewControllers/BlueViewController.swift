@@ -39,7 +39,13 @@ class BlueViewController: UIViewController, BlueViewControllerProtocol {
     }
     
     func didGetError(message: String) {
-        
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(action)
+            alert.view.tag = ViewTag.errorAlert.rawValue
+            self.present(alert, animated: true)
+        }
     }
     
 }

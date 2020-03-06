@@ -13,4 +13,5 @@ enum ViewTag: Int {
     case blueVc = 12
     case yellowVCButton = 13
     case blueVCTableView = 14
+    case errorAlert = 15
 }

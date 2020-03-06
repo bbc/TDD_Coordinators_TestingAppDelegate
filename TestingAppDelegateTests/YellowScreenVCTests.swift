@@ -21,7 +21,6 @@ class YellowScreenVCTests: XCTestCase {
 
         XCTAssertNotNil(theView)
         XCTAssertNotNil(button)
-        
     }
 
 }
