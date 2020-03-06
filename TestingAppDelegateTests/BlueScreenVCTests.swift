@@ -67,7 +67,6 @@ class BlueScreenVCTests: XCTestCase {
             XCTAssertEqual(title, "Error")
             XCTAssertEqual(message, "An error as occurred")
             
-            
             asyncExpectation.fulfill()
         })
         waitForExpectations(timeout: 1.5, handler: nil)
