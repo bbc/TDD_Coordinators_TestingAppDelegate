@@ -130,7 +130,11 @@ extension DataService_Tests {
     func getTestFruitJson(fruitList: [Fruit]?) -> Data? {
         do {
             let encoder = JSONEncoder()
-            let fruitJson = try encoder.encode(fruitList)
+            var fruit: FruitList?
+            if let fruitList = fruitList {
+                fruit = FruitList(fruit: fruitList)
+            }
+            let fruitJson = try encoder.encode(fruit)
             return fruitJson
         } catch {
             print(error)
@@ -139,7 +143,7 @@ extension DataService_Tests {
     }
     
     func getTestFruitWrongJson() -> Data? {
-        let fruitList = [WrongFruit(name: "apple", price: 149, weight: 120), WrongFruit(name: "banana", price: 129, weight: 80)]
+        let fruitList = [Fruit(type: "apple", price: 149, weight: 120), Fruit(type: "banana", price: 129, weight: 80)]
         do {
             let encoder = JSONEncoder()
             let fruitJson = try encoder.encode(fruitList)
@@ -149,12 +153,4 @@ extension DataService_Tests {
             return nil
         }
     }
-    
-    
-    struct WrongFruit : Codable {
-        var name: String
-        var price: Int
-        var weight: Int
-    }
-    
 }

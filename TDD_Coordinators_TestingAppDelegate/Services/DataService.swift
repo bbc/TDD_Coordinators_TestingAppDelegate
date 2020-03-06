@@ -26,8 +26,8 @@ class DataService: DataServiceProtocol {
                 if let data = data {
                     do {
                         let decoder = JSONDecoder()
-                        let fruitList = try decoder.decode([Fruit].self, from: data)
-                        completion(fruitList, nil)
+                        let fruitList = try decoder.decode(FruitList.self, from: data)
+                        completion(fruitList.fruit, nil)
                     } catch {
                         print(error)
                         completion(nil, NetworkingError.dataDecodingError)

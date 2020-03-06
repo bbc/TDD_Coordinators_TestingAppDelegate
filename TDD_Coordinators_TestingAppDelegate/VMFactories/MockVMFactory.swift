@@ -9,9 +9,9 @@
 import Foundation
 
 class MockVMFactory: VMFactoryProtocol {
-
+    
     var appCoordinator: AppCoordinatorProtocol?
-       
+    
     func makeYellowScreenViewModel() -> YellowScreenViewModelProtocol {
         return MockYellowScreenViewModel()
     }

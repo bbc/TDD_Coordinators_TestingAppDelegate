@@ -21,6 +21,7 @@ class BlueScreenViewModel: BlueScreenViewModelProtocol {
         dataService?.fetchFruits(completion: { (fruitList, error) in
             if let error = error {
                 self.error = error
+                print(error)
                 self.delegate?.didGetError(message: "An error has occurred")
             } else {
                 if let fruitList = fruitList {

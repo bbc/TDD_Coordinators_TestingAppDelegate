@@ -27,10 +27,15 @@ class BlueViewController: UIViewController, BlueViewControllerProtocol {
         fruitTableView.reloadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        fruitTableView.reloadData()
+    }
+    
     
     func didGetData() {
-        print("in")
-        fruitTableView.reloadData()
+        DispatchQueue.main.async {
+            self.fruitTableView.reloadData()
+        }
     }
     
     func didGetError(message: String) {

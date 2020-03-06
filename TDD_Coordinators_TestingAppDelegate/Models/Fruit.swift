@@ -8,6 +8,10 @@
 
 import Foundation
 
+struct FruitList: Codable {
+    let fruit: [Fruit]
+}
+
 struct Fruit : Codable{
     let type: String
     var price: Int
