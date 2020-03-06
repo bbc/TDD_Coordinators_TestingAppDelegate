@@ -13,7 +13,7 @@ class VMFactory: VMFactoryProtocol {
     var dataService: DataServiceProtocol
     var appCoordinator: AppCoordinatorProtocol?
     
-    required init(dataService: DataServiceProtocol) {
+    init(dataService: DataServiceProtocol) {
         self.dataService = dataService
     }
         

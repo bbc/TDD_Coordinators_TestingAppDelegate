@@ -124,32 +124,37 @@ class DataService_Tests: XCTestCase {
     }
 }
 
-func getTestFruitJson(fruitList: [Fruit]?) -> Data? {
-    do {
-        let encoder = JSONEncoder()
-        let fruitJson = try encoder.encode(fruitList)
-        return fruitJson
-    } catch {
-        print(error)
-        return nil
+
+extension DataService_Tests {
+    
+    func getTestFruitJson(fruitList: [Fruit]?) -> Data? {
+        do {
+            let encoder = JSONEncoder()
+            let fruitJson = try encoder.encode(fruitList)
+            return fruitJson
+        } catch {
+            print(error)
+            return nil
+        }
     }
-}
-
-func getTestFruitWrongJson() -> Data? {
-    let fruitList = [WrongFruit(name: "apple", price: 149, weight: 120), WrongFruit(name: "banana", price: 129, weight: 80)]
-    do {
-        let encoder = JSONEncoder()
-        let fruitJson = try encoder.encode(fruitList)
-        return fruitJson
-    } catch {
-        print(error)
-        return nil
+    
+    func getTestFruitWrongJson() -> Data? {
+        let fruitList = [WrongFruit(name: "apple", price: 149, weight: 120), WrongFruit(name: "banana", price: 129, weight: 80)]
+        do {
+            let encoder = JSONEncoder()
+            let fruitJson = try encoder.encode(fruitList)
+            return fruitJson
+        } catch {
+            print(error)
+            return nil
+        }
     }
-}
-
-
-struct WrongFruit : Codable {
-    var name: String
-    var price: Int
-    var weight: Int
+    
+    
+    struct WrongFruit : Codable {
+        var name: String
+        var price: Int
+        var weight: Int
+    }
+    
 }

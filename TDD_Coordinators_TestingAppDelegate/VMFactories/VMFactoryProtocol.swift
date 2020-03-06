@@ -11,8 +11,6 @@ import Foundation
 protocol VMFactoryProtocol {
     var appCoordinator: AppCoordinatorProtocol? {get set}
     
-    init(dataService: DataServiceProtocol)
-    
     func makeYellowScreenViewModel() -> YellowScreenViewModelProtocol
     func makeBlueScreenViewModel() -> BlueScreenViewModelProtocol
 }

@@ -10,30 +10,31 @@ import Foundation
 import UIKit
 
 class MockVCFactory: VCFactoryProtocol {
-    
-    init() {}
-        
+            
     var yellowVM: YellowScreenViewModelProtocol?
     
     func makeYellowScreen(yellowViewModel: YellowScreenViewModelProtocol) -> UIViewController {
-        yellowVM = yellowViewModel
-        //if we are using the storyboard here is this really a mock at all?
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle:Bundle(for: type(of: self)))
-        let yellowViewController = storyboard.instantiateViewController(identifier: "YellowViewController") as! YellowViewController
-        yellowViewController.yellowVM = yellowViewModel
-        return yellowViewController
+        self.yellowVM = yellowViewModel
+        return ViewControllerWithTag()
     }
     
-//    public func makeBlueScreen() -> UIViewController {
-//        return BlueViewController()
-//    }
-//
     func makeBlueScreen(blueViewModel: BlueScreenViewModelProtocol) -> UIViewController {
-        return BlueViewController()
+        return ViewControllerWithOtherTag()
     }
-    
-    
-    
-    
 }
 
+class ViewControllerWithTag : UIViewController
+{
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.tag = 11
+    }
+}
+
+class ViewControllerWithOtherTag : UIViewController
+{
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.tag = 12
+    }
+}

@@ -15,7 +15,7 @@ class BlueScreenViewModel: BlueScreenViewModelProtocol {
     var error: Error?
     weak var delegate: BlueScreenViewModelDelegate?
     
-    required init(dataService: DataServiceProtocol?) {
+    init(dataService: DataServiceProtocol?) {
         self.dataService = dataService
         // should we have a capture list here?
         dataService?.fetchFruits(completion: { (fruitList, error) in

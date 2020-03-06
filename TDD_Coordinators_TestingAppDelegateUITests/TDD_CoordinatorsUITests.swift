@@ -26,15 +26,15 @@ class TDD_CoordinatorsUITests: XCTestCase {
     
     
     func testGivenWhenAppIsLaunchedThenTheYellowVCIsShown() {
-        
         XCTAssertEqual(app.otherElements["yellowVC"].exists, true)
+        XCTAssertEqual(app.otherElements.buttons["Show Blue Screen"].exists, true)
     }
     
     func testGivenYouAreOnYellowVCWhenButtonIsPressedThenBlueVCIsNAvigatedTo() {
-        
         app.otherElements.buttons["Show Blue Screen"].tap()
         
         XCTAssertEqual(app.otherElements["blueVC"].exists, true)
     }
+    
             
 }

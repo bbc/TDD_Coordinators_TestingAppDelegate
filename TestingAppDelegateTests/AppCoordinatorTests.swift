@@ -12,26 +12,23 @@ class AppCoordinatorTests: XCTestCase {
     
     func testThatTheDefaultScreenIsYellow(){
         let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first!
-        let mockDataService = MockDataService(fruitList: nil, error: nil)
-
-        let appCoordinator = AppCoordinator(vcFactory: MockVCFactory(), vmFactory: MockVMFactory(dataService: mockDataService), window: window)
+        let mvmf = MockVCFactory()
+        let appCoordinator = AppCoordinator(vcFactory: mvmf, vmFactory: MockVMFactory(), window: window)
         
         appCoordinator.showYellowScreen()
         
-        XCTAssertNotNil(appCoordinator.yellowVC)
-        XCTAssertNotNil(appCoordinator.yellowScreenVM)
-        XCTAssertNotNil(window.viewWithTag(1))
+        XCTAssertNotNil(mvmf.yellowVM)
+        XCTAssertNotNil(window.viewWithTag(11))
     }
     
     func testGivenYouAreOnYellowVCWhenButtonIsPressedThenBlueVCIsNAvigatedToUsingAWindow() {
         let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first!
-        let mockDataService = MockDataService(fruitList: nil, error: nil)
-        let appCoordinator = AppCoordinator(vcFactory: MockVCFactory(), vmFactory: MockVMFactory(dataService: mockDataService), window: window)
+        let appCoordinator = AppCoordinator(vcFactory: MockVCFactory(), vmFactory: MockVMFactory(), window: window)
         
         appCoordinator.showBlueScreen()
         
         XCTAssertNotNil(appCoordinator.blueVC)
-        XCTAssertNotNil(window.viewWithTag(2))
+        XCTAssertNotNil(window.viewWithTag(12))
     }
     
     

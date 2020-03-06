@@ -22,6 +22,5 @@ class Networking: NetworkProtocol {
             }
         }
         dataTask.resume()
-        
     }
 }

@@ -15,8 +15,7 @@ class YellowScreenViewModel_Tests: XCTestCase {
         
         //arrange
         let yellowViewModel = YellowScreenViewModel()
-        let mockDataService = MockDataService(fruitList: nil, error: nil)
-        let mockAppCoordinator = MockAppCoordinator(vcFactory: MockVCFactory(), vmFactory: MockVMFactory(dataService: mockDataService), window: UIWindow())
+        let mockAppCoordinator = MockAppCoordinator()
         yellowViewModel.appCoordinator = mockAppCoordinator
         
         //act

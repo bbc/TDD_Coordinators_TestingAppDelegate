@@ -10,22 +10,31 @@ import Foundation
 
 class MockVMFactory: VMFactoryProtocol {
 
-    var dataService: DataServiceProtocol
     var appCoordinator: AppCoordinatorProtocol?
-    
-    required init(dataService: DataServiceProtocol) {
-        self.dataService = dataService
-    }
        
     func makeYellowScreenViewModel() -> YellowScreenViewModelProtocol {
-        let yellowScreenVM = YellowScreenViewModel()
-        yellowScreenVM.appCoordinator = self.appCoordinator
-        return yellowScreenVM
+        return MockYellowScreenViewModel()
     }
     
     func makeBlueScreenViewModel() -> BlueScreenViewModelProtocol {
-        let blueScreenVm = BlueScreenViewModel(dataService: self.dataService)
-        return blueScreenVm
+        return MockBlueScreenViewModel()
     }
 }
 
+class MockYellowScreenViewModel: YellowScreenViewModelProtocol {
+    var appCoordinator: AppCoordinatorProtocol?
+    
+    func launchBlueScreen() {
+    }
+    
+}
+
+class MockBlueScreenViewModel: BlueScreenViewModelProtocol {
+    var delegate: BlueScreenViewModelDelegate?
+    
+    var appCoordinator: AppCoordinatorProtocol?
+    
+    func launchBlueScreen() {
+    }
+    
+}

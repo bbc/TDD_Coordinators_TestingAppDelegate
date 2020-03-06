@@ -10,5 +10,4 @@ import Foundation
 
 protocol BlueScreenViewModelProtocol {
     var delegate: BlueScreenViewModelDelegate? { get set }
-    init(dataService: DataServiceProtocol?)
 }

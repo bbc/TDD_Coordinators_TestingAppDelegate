@@ -15,7 +15,7 @@ class VCFactory_Tests: XCTestCase {
         //arrange
         let vcFactory = VCFactory()
         //act
-        let yellowVC = vcFactory.makeYellowScreen(yellowViewModel: YellowScreenViewModel()) as? YellowViewController
+        let yellowVC = vcFactory.makeYellowScreen(yellowViewModel: MockYellowScreenViewModel()) as? YellowViewController
         //assert
         XCTAssertNotNil(yellowVC)
         XCTAssertNotNil(yellowVC?.yellowVM)
@@ -24,9 +24,8 @@ class VCFactory_Tests: XCTestCase {
     func testGivenAYellowScreenWhenTheButtonIsPressedVCFactoryReturnsABlueVC() {
         //arrange
         let vcFactory = VCFactory()
-        let mockDataService = MockDataService(fruitList: nil, error: nil)
         //act
-        let blueVC = vcFactory.makeBlueScreen(blueViewModel: BlueScreenViewModel(dataService: mockDataService)) as? BlueViewController
+        let blueVC = vcFactory.makeBlueScreen(blueViewModel: MockBlueScreenViewModel()) as? BlueViewController
         //assert
         XCTAssertNotNil(blueVC)
         XCTAssertNotNil(blueVC?.blueVM)

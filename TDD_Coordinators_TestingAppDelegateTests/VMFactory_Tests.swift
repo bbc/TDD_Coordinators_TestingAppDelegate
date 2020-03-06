@@ -15,7 +15,7 @@ class VMFactory_Tests: XCTestCase {
         //arrange
         let mockDataService = MockDataService(fruitList: nil, error: nil)
         let viewModelFactory = VMFactory(dataService: mockDataService)
-        viewModelFactory.appCoordinator = MockAppCoordinator(vcFactory: MockVCFactory(), vmFactory: viewModelFactory, window: UIWindow())
+        viewModelFactory.appCoordinator = MockAppCoordinator()
         //act
         let yellowViewModel = viewModelFactory.makeYellowScreenViewModel()
         //assert
@@ -27,7 +27,7 @@ class VMFactory_Tests: XCTestCase {
         //given
         let mockDataService = MockDataService(fruitList: nil, error: nil)
         let viewModelFactory = VMFactory(dataService: mockDataService)
-        viewModelFactory.appCoordinator = MockAppCoordinator(vcFactory: MockVCFactory(), vmFactory: viewModelFactory, window: UIWindow())
+        viewModelFactory.appCoordinator = MockAppCoordinator()
         //act
         let blueViewModel = viewModelFactory.makeBlueScreenViewModel()
         //assert

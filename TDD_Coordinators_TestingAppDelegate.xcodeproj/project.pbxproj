@@ -24,6 +24,8 @@
 		2CE4B88B241100C800BFF98A /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B8892410FE8C00BFF98A /* Networking.swift */; };
 		2CE4B88C241100C800BFF98A /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B8892410FE8C00BFF98A /* Networking.swift */; };
 		2CE4B88D241100C900BFF98A /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B8892410FE8C00BFF98A /* Networking.swift */; };
+		2CE4B88F24111BAA00BFF98A /* BlueScreenVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B88E24111BAA00BFF98A /* BlueScreenVCTests.swift */; };
+		2CE4B891241159BA00BFF98A /* VCShite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4B890241159BA00BFF98A /* VCShite.swift */; };
 		981574CE240D594300505525 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981574CD240D594300505525 /* NetworkingError.swift */; };
 		981574CF240D595600505525 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981574CD240D594300505525 /* NetworkingError.swift */; };
 		981574D0240D595700505525 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981574CD240D594300505525 /* NetworkingError.swift */; };
@@ -174,6 +176,8 @@
 		2CE4B882240FC8BD00BFF98A /* BlueViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewControllerProtocol.swift; sourceTree = "<group>"; };
 		2CE4B887240FCA5600BFF98A /* DataService_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService_Tests.swift; sourceTree = "<group>"; };
 		2CE4B8892410FE8C00BFF98A /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		2CE4B88E24111BAA00BFF98A /* BlueScreenVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueScreenVCTests.swift; sourceTree = "<group>"; };
+		2CE4B890241159BA00BFF98A /* VCShite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCShite.swift; sourceTree = "<group>"; };
 		981574CD240D594300505525 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		983EEF98240560BC009C74AC /* TDD_Coordinators_TestingAppDelegate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDD_Coordinators_TestingAppDelegate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		983EEF9B240560BC009C74AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -394,7 +398,9 @@
 				983EF04124056912009C74AC /* TestingAppDelegate.swift */,
 				983EF0432405695A009C74AC /* TestingSceneDelegate.swift */,
 				983EF002240562E5009C74AC /* AppCoordinatorTests.swift */,
+				2CE4B88E24111BAA00BFF98A /* BlueScreenVCTests.swift */,
 				983EF004240562E5009C74AC /* Info.plist */,
+				2CE4B890241159BA00BFF98A /* VCShite.swift */,
 			);
 			path = TestingAppDelegateTests;
 			sourceTree = "<group>";
@@ -705,6 +711,8 @@
 				2CE4B886240FC8BD00BFF98A /* BlueViewControllerProtocol.swift in Sources */,
 				983EF00F24056334009C74AC /* MockAppCoordinator.swift in Sources */,
 				989D22402408258500C378D0 /* MockDataService.swift in Sources */,
+				2CE4B88F24111BAA00BFF98A /* BlueScreenVCTests.swift in Sources */,
+				2CE4B891241159BA00BFF98A /* VCShite.swift in Sources */,
 				983EF039240563AC009C74AC /* AppLauncher.swift in Sources */,
 				983EF02A24056376009C74AC /* YellowScreenViewModel.swift in Sources */,
 				989D22362408252C00C378D0 /* DataServiceProtocol.swift in Sources */,

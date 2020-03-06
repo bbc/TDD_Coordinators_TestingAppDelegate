@@ -10,9 +10,7 @@ import Foundation
 import UIKit
 
 protocol AppCoordinatorProtocol {
-    
-    init(vcFactory: VCFactoryProtocol, vmFactory: VMFactoryProtocol, window: UIWindow)
-    
+        
     func showYellowScreen()
     func showBlueScreen()
 }
