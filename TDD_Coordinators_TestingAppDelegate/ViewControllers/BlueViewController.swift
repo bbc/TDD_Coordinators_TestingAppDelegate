@@ -18,6 +18,7 @@ class BlueViewController: UIViewController, BlueViewControllerProtocol {
         super.viewDidLoad()
         view.backgroundColor = .blue
         view.accessibilityIdentifier = "blueVC"
+        fruitTableView.accessibilityIdentifier = "fruitTableView"
         view.tag = ViewTag.blueVc.rawValue
         
         blueVM?.delegate = self

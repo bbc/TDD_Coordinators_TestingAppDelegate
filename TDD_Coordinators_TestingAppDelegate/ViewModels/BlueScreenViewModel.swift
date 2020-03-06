@@ -25,7 +25,7 @@ class BlueScreenViewModel: BlueScreenViewModelProtocol {
                 self.delegate?.didGetError(message: "An error has occurred")
             } else {
                 if let fruitList = fruitList {
-                     self.fruitList = fruitList
+                    self.fruitList = fruitList
                     self.delegate?.didGetData()
                 }
             }
