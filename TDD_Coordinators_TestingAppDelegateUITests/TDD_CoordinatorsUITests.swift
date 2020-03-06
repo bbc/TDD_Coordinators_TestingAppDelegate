@@ -20,25 +20,19 @@ class TDD_CoordinatorsUITests: XCTestCase {
     }
     
     
-//    func testGivenWhenAppIsLaunchedThenTheYellowVCIsShown() {
-//        XCTAssertEqual(app.otherElements["yellowVC"].exists, true)
-//        XCTAssertEqual(app.otherElements.buttons["Show Blue Screen"].exists, true)
-//    }
-    
     func testGivenYouAreOnYellowVCWhenButtonIsPressedThenBlueVCIsNAvigatedTo() {
         let asyncExpectation = self.expectation(description: "Async block executed")
         
         app.otherElements.buttons["Show Blue Screen"].tap()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
             XCTAssertEqual(self.app.otherElements["blueVC"].exists, true)
             XCTAssertEqual(self.app.tables["fruitTableView"].exists, true)
             XCTAssertEqual(self.app.tables["fruitTableView"].staticTexts["apple"].exists, true)
             asyncExpectation.fulfill()
         })
         
-        waitForExpectations(timeout: 5.5, handler: nil)
-        
+        waitForExpectations(timeout: 1.5, handler: nil)
     }
     
             
